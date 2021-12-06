@@ -1,0 +1,12 @@
+{
+    "name": "flows_BW",
+    "description": "flows_BW",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flows_BW.json",
+            "credentialsFile": "flows_BW_cred.json"
+        }
+    }
+}
