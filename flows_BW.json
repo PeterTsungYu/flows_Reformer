@@ -240,7 +240,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 410,
-        "y": 740,
+        "y": 720,
         "wires": []
     },
     {
@@ -296,7 +296,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 370,
-        "y": 1100,
+        "y": 1080,
         "wires": []
     },
     {
@@ -350,7 +350,7 @@
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 880,
+        "y": 840,
         "wires": [
             [
                 "f5e78be3c1ee0a93",
@@ -489,8 +489,7 @@
         "wires": [
             [
                 "7c50af5572611d22",
-                "18a790e9cc9f4a90",
-                "e1ebe7e84e919db6"
+                "18a790e9cc9f4a90"
             ],
             [
                 "7c50af5572611d22"
@@ -545,7 +544,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "x": 590,
-        "y": 3500,
+        "y": 3560,
         "wires": [
             []
         ]
@@ -572,25 +571,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 790,
-        "y": 3420,
-        "wires": []
-    },
-    {
-        "id": "e1ebe7e84e919db6",
-        "type": "debug",
-        "z": "51d9a1627388b982",
-        "name": "CO",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 570,
-        "y": 3420,
+        "x": 590,
+        "y": 3500,
         "wires": []
     },
     {
@@ -821,7 +803,7 @@
         "reduceInit": "",
         "reduceInitType": "num",
         "reduceFixup": "",
-        "x": 980,
+        "x": 970,
         "y": 920,
         "wires": [
             [
@@ -950,7 +932,7 @@
         "nl": false,
         "rap": false,
         "x": 2090,
-        "y": 2720,
+        "y": 2680,
         "wires": [
             [
                 "ee5db7d99c5efce9"
@@ -971,7 +953,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 2330,
-        "y": 2720,
+        "y": 2680,
         "wires": []
     },
     {
@@ -989,7 +971,7 @@
         "expiry": "",
         "broker": "f8aea8534f5e2a70",
         "x": 1860,
-        "y": 2720,
+        "y": 2680,
         "wires": []
     },
     {
@@ -1061,7 +1043,7 @@
         "topicType": "msg",
         "splitLayout": false,
         "x": 160,
-        "y": 2840,
+        "y": 2800,
         "wires": [
             [
                 "7f5c753c46769053",
@@ -1084,7 +1066,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 330,
-        "y": 2780,
+        "y": 2740,
         "wires": []
     },
     {
@@ -1099,7 +1081,7 @@
         "stream": false,
         "addname": "topic",
         "x": 330,
-        "y": 2840,
+        "y": 2800,
         "wires": [
             [
                 "a21d2b9600fcafc7",
@@ -1150,7 +1132,7 @@
         "repair": false,
         "outputs": 6,
         "x": 510,
-        "y": 2840,
+        "y": 2800,
         "wires": [
             [
                 "aa6aaa305bcc94c6"
@@ -1198,7 +1180,7 @@
         "repair": false,
         "outputs": 3,
         "x": 790,
-        "y": 2700,
+        "y": 2660,
         "wires": [
             [
                 "086ef62f2e115fa0"
@@ -1228,7 +1210,7 @@
         "count": "",
         "reduceRight": false,
         "x": 1590,
-        "y": 2660,
+        "y": 2620,
         "wires": [
             [
                 "b8c991913306f039",
@@ -1257,7 +1239,7 @@
         "to": "",
         "reg": false,
         "x": 1260,
-        "y": 2980,
+        "y": 2940,
         "wires": [
             [
                 "ec71963a230dbbbe"
@@ -1297,7 +1279,7 @@
         "repair": false,
         "outputs": 4,
         "x": 750,
-        "y": 2760,
+        "y": 2720,
         "wires": [
             [
                 "8211bf42a2bb8a7e"
@@ -1346,7 +1328,7 @@
         "repair": false,
         "outputs": 4,
         "x": 790,
-        "y": 2840,
+        "y": 2800,
         "wires": [
             [
                 "8211bf42a2bb8a7e"
@@ -1401,7 +1383,7 @@
         "repair": false,
         "outputs": 5,
         "x": 780,
-        "y": 2920,
+        "y": 2880,
         "wires": [
             [
                 "8211bf42a2bb8a7e"
@@ -1453,7 +1435,7 @@
         "repair": false,
         "outputs": 4,
         "x": 780,
-        "y": 3000,
+        "y": 2960,
         "wires": [
             [
                 "8211bf42a2bb8a7e"
@@ -1483,7 +1465,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1850,
-        "y": 2780,
+        "y": 2740,
         "wires": []
     },
     {
@@ -1500,7 +1482,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 470,
-        "y": 2960,
+        "y": 2920,
         "wires": []
     },
     {
@@ -1518,7 +1500,7 @@
         "topic": "",
         "name": "Wrong Set",
         "x": 1250,
-        "y": 3020,
+        "y": 2980,
         "wires": [
             []
         ]
@@ -1538,7 +1520,7 @@
         "topic": "MQTT pub",
         "name": "MQTT pub",
         "x": 2090,
-        "y": 2660,
+        "y": 2620,
         "wires": []
     },
     {
@@ -1561,7 +1543,7 @@
         "to": "",
         "reg": false,
         "x": 1860,
-        "y": 2660,
+        "y": 2620,
         "wires": [
             [
                 "a6511e36dfa0b0f0"
@@ -1594,7 +1576,7 @@
         "repair": false,
         "outputs": 3,
         "x": 790,
-        "y": 2640,
+        "y": 2600,
         "wires": [
             [
                 "086ef62f2e115fa0"
@@ -1835,7 +1817,7 @@
         "property": "payload",
         "name": "0-100% to 0-10V (12bits)",
         "x": 1290,
-        "y": 2740,
+        "y": 2700,
         "wires": [
             [
                 "ec71963a230dbbbe"
@@ -1856,7 +1838,7 @@
         "property": "payload",
         "name": "0-120 to 0-5V (12bits)",
         "x": 1280,
-        "y": 2780,
+        "y": 2740,
         "wires": [
             [
                 "ec71963a230dbbbe",
@@ -1877,7 +1859,7 @@
         "property": "payload",
         "name": "0-250 to 0-5V (12bits)",
         "x": 1280,
-        "y": 2860,
+        "y": 2820,
         "wires": [
             [
                 "ec71963a230dbbbe"
@@ -1897,7 +1879,7 @@
         "property": "payload",
         "name": "0-100 to 0-5V (12bits)",
         "x": 1280,
-        "y": 2900,
+        "y": 2860,
         "wires": [
             [
                 "ec71963a230dbbbe"
@@ -1918,7 +1900,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1670,
-        "y": 2900,
+        "y": 2860,
         "wires": []
     },
     {
@@ -2088,7 +2070,7 @@
         "to": "",
         "reg": false,
         "x": 1250,
-        "y": 2940,
+        "y": 2900,
         "wires": [
             [
                 "ec71963a230dbbbe"
@@ -2263,7 +2245,7 @@
         "to": "",
         "reg": false,
         "x": 380,
-        "y": 3020,
+        "y": 2980,
         "wires": [
             []
         ]
@@ -2370,8 +2352,8 @@
         "topic": "DB",
         "payload": "0",
         "payloadType": "str",
-        "x": 180,
-        "y": 4140,
+        "x": 160,
+        "y": 4220,
         "wires": [
             [
                 "f195886a5b838d03"
@@ -2389,8 +2371,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 4140,
+        "x": 420,
+        "y": 4220,
         "wires": [
             [
                 "d3e95f38898e57bb"
@@ -2416,8 +2398,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 680,
-        "y": 4140,
+        "x": 660,
+        "y": 4220,
         "wires": [
             [
                 "55dcd61a795f612b",
@@ -2438,8 +2420,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 910,
-        "y": 4200,
+        "x": 890,
+        "y": 4280,
         "wires": []
     },
     {
@@ -2453,8 +2435,8 @@
         "cells": "Sheet1",
         "flatten": false,
         "name": "",
-        "x": 930,
-        "y": 4140,
+        "x": 910,
+        "y": 4220,
         "wires": [
             [
                 "e2d44ca482f969ca"
@@ -2475,7 +2457,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 1130,
-        "y": 4060,
+        "y": 4220,
         "wires": []
     },
     {
@@ -2535,7 +2517,7 @@
         "reduceInit": "",
         "reduceInitType": "num",
         "reduceFixup": "",
-        "x": 980,
+        "x": 970,
         "y": 840,
         "wires": [
             [
@@ -2681,7 +2663,7 @@
         "finalize": "",
         "libs": [],
         "x": 1240,
-        "y": 2820,
+        "y": 2780,
         "wires": [
             [
                 "9c19f2d9b0971aa5",
@@ -2765,7 +2747,7 @@
         "property": "payload",
         "name": "",
         "x": 1390,
-        "y": 2820,
+        "y": 2780,
         "wires": [
             [
                 "ec71963a230dbbbe"
@@ -3100,7 +3082,7 @@
         "topic": "",
         "name": "BW reformer air 200LPM max",
         "x": 1310,
-        "y": 3060,
+        "y": 3020,
         "wires": [
             []
         ]
@@ -3708,7 +3690,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 370,
-        "y": 1300,
+        "y": 1280,
         "wires": []
     },
     {
@@ -3772,7 +3754,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 350,
-        "y": 1920,
+        "y": 1900,
         "wires": []
     },
     {
@@ -3843,7 +3825,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 360,
-        "y": 2140,
+        "y": 2120,
         "wires": []
     },
     {
