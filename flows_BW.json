@@ -554,8 +554,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 590,
-        "y": 3560,
+        "x": 610,
+        "y": 3460,
         "wires": [
             []
         ]
@@ -582,8 +582,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 590,
-        "y": 3500,
+        "x": 610,
+        "y": 3420,
         "wires": []
     },
     {
@@ -666,7 +666,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 1160,
+        "x": 1280,
         "y": 2200,
         "wires": [
             []
@@ -808,8 +808,8 @@
         "joiner": "\\n",
         "joinerType": "str",
         "accumulate": false,
-        "timeout": "",
-        "count": "10",
+        "timeout": "0.5",
+        "count": "",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
@@ -937,7 +937,7 @@
         "type": "mqtt in",
         "z": "51d9a1627388b982",
         "name": "",
-        "topic": "nodered_port",
+        "topic": "Manual_Input",
         "qos": "0",
         "datatype": "auto",
         "broker": "f8aea8534f5e2a70",
@@ -973,7 +973,7 @@
         "type": "mqtt out",
         "z": "51d9a1627388b982",
         "name": "",
-        "topic": "nodered_port",
+        "topic": "Manual_Input",
         "qos": "0",
         "retain": "true",
         "respTopic": "",
@@ -1217,10 +1217,14 @@
         "key": "topic",
         "joiner": "\\n",
         "joinerType": "str",
-        "accumulate": "false",
+        "accumulate": true,
         "timeout": "",
         "count": "",
         "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
         "x": 1650,
         "y": 2620,
         "wires": [
@@ -1488,13 +1492,13 @@
         "active": true,
         "tosidebar": true,
         "console": false,
-        "tostatus": false,
+        "tostatus": true,
         "complete": "true",
         "targetType": "full",
-        "statusVal": "",
+        "statusVal": "payload",
         "statusType": "auto",
-        "x": 470,
-        "y": 2920,
+        "x": 460,
+        "y": 2900,
         "wires": []
     },
     {
@@ -1980,7 +1984,8 @@
         "wires": [
             [
                 "ba75811dae114c69",
-                "dcccdc5ff7464167"
+                "dcccdc5ff7464167",
+                "1b6613b15b9bcbb8"
             ]
         ]
     },
@@ -2044,7 +2049,8 @@
         "wires": [
             [
                 "ba75811dae114c69",
-                "dcccdc5ff7464167"
+                "dcccdc5ff7464167",
+                "1b7f7e50a6442b99"
             ]
         ]
     },
@@ -2347,7 +2353,8 @@
         "wires": [
             [
                 "f195886a5b838d03",
-                "51f38ef1f5276f8f"
+                "51f38ef1f5276f8f",
+                "328b020dbef4c8d5"
             ]
         ]
     },
@@ -2502,8 +2509,8 @@
         "joiner": "\\n",
         "joinerType": "str",
         "accumulate": false,
-        "timeout": "",
-        "count": "8",
+        "timeout": "0.5",
+        "count": "",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
@@ -2668,7 +2675,7 @@
         "type": "function",
         "z": "51d9a1627388b982",
         "name": "",
-        "func": "msg.payload = 14.3 * msg.payload + 1.04\nmsg.payload = parseFloat(msg.payload).toFixed(2)\nreturn msg;",
+        "func": "msg.payload = 14.3 * msg.payload + 1.04\nmsg.payload = parseFloat(msg.payload.toFixed(2))\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2805,7 +2812,7 @@
         "type": "function",
         "z": "51d9a1627388b982",
         "name": "Round to two-digits",
-        "func": "msg.payload = parseFloat(msg.payload).toFixed(2)\nreturn msg;",
+        "func": "msg.payload = parseFloat(msg.payload.toFixed(2))\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3861,7 +3868,8 @@
                 "9478dbaf4ae8ae38"
             ],
             [
-                "5f9f6add5476c2c0"
+                "5f9f6add5476c2c0",
+                "7e23ef57d2c63744"
             ],
             [
                 "dcccdc5ff7464167"
@@ -4085,7 +4093,6 @@
         "id": "ba541e636e2494dc",
         "type": "change",
         "z": "51d9a1627388b982",
-        "d": true,
         "name": "",
         "rules": [
             {
@@ -4186,7 +4193,7 @@
         "type": "function",
         "z": "51d9a1627388b982",
         "name": "",
-        "func": "msg.payload = (msg.payload[0] - msg.payload[msg.payload.length - 1]) * 1000\nmsg.payload = parseFloat(msg.payload).toFixed(2)\nreturn msg;",
+        "func": "msg.payload = (msg.payload[0] - msg.payload[msg.payload.length - 1]) * 1000\nmsg.payload = parseFloat(msg.payload.toFixed(2))\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4232,8 +4239,8 @@
         "joiner": "\\n",
         "joinerType": "str",
         "accumulate": false,
-        "timeout": "",
-        "count": "8",
+        "timeout": "0.5",
+        "count": "",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
@@ -4260,8 +4267,8 @@
         "joiner": "\\n",
         "joinerType": "str",
         "accumulate": false,
-        "timeout": "",
-        "count": "8",
+        "timeout": "0.5",
+        "count": "",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
@@ -4289,15 +4296,15 @@
         "joiner": "\\n",
         "joinerType": "str",
         "accumulate": false,
-        "timeout": "",
-        "count": "8",
+        "timeout": "0.5",
+        "count": "",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
         "reduceInitType": "num",
         "reduceFixup": "",
-        "x": 1410,
-        "y": 2200,
+        "x": 1390,
+        "y": 2240,
         "wires": [
             [
                 "7d9074b05aff4b49",
@@ -4318,8 +4325,8 @@
         "joiner": "\\n",
         "joinerType": "str",
         "accumulate": false,
-        "timeout": "",
-        "count": "8",
+        "timeout": "0.5",
+        "count": "",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
@@ -4364,8 +4371,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1660,
-        "y": 1900,
+        "x": 1310,
+        "y": 1960,
         "wires": []
     },
     {
@@ -4381,8 +4388,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1870,
-        "y": 2380,
+        "x": 1570,
+        "y": 2280,
         "wires": []
     },
     {
@@ -4434,6 +4441,111 @@
         "statusType": "auto",
         "x": 900,
         "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "1b7f7e50a6442b99",
+        "type": "debug",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "1b6613b15b9bcbb8",
+        "type": "debug",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 2420,
+        "wires": []
+    },
+    {
+        "id": "7e23ef57d2c63744",
+        "type": "debug",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 360,
+        "y": 2460,
+        "wires": []
+    },
+    {
+        "id": "328b020dbef4c8d5",
+        "type": "mqtt out",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "topic": "NodeRed",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f8aea8534f5e2a70",
+        "x": 424,
+        "y": 4296,
+        "wires": []
+    },
+    {
+        "id": "653bff1862bc9777",
+        "type": "mqtt in",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "topic": "NodeRed",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "f8aea8534f5e2a70",
+        "nl": false,
+        "rap": false,
+        "x": 920,
+        "y": 4360,
+        "wires": [
+            [
+                "bc0a1917f0a49e8c"
+            ]
+        ]
+    },
+    {
+        "id": "bc0a1917f0a49e8c",
+        "type": "debug",
+        "z": "51d9a1627388b982",
+        "name": "NodeRed",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 4360,
         "wires": []
     }
 ]
