@@ -4216,7 +4216,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 4580,
+        "x": 4660,
         "y": 100,
         "wires": []
     },
@@ -4250,8 +4250,7 @@
         "y": 160,
         "wires": [
             [
-                "9af30707222648de",
-                "8a0c8ed070633cba"
+                "d2dd2c9ee8e35d7c"
             ]
         ]
     },
@@ -4316,7 +4315,7 @@
         "correl": "",
         "expiry": "",
         "broker": "f8aea8534f5e2a70",
-        "x": 4560,
+        "x": 4700,
         "y": 260,
         "wires": []
     },
@@ -4327,43 +4326,16 @@
         "position": "top right",
         "displayTime": "3",
         "highlight": "",
-        "sendall": true,
+        "sendall": false,
         "outputs": 0,
         "ok": "OK",
         "cancel": "",
         "raw": false,
         "topic": "MQTT pub",
         "name": "MQTT pub",
-        "x": 4810,
+        "x": 4910,
         "y": 220,
         "wires": []
-    },
-    {
-        "id": "6c7930742d35c17b",
-        "type": "change",
-        "z": "51d9a1627388b982",
-        "name": "Sending to RPi",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Sending to RPi",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 4580,
-        "y": 220,
-        "wires": [
-            [
-                "07aa718300ae21e7"
-            ]
-        ]
     },
     {
         "id": "8a0c8ed070633cba",
@@ -4384,7 +4356,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 4630,
+        "x": 4700,
         "y": 160,
         "wires": [
             []
@@ -5582,7 +5554,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 4570,
+        "x": 4710,
         "y": 320,
         "wires": []
     },
@@ -5616,9 +5588,7 @@
         "y": 260,
         "wires": [
             [
-                "72cbb208ec799444",
-                "6c7930742d35c17b",
-                "80fb3035b2aeaf36"
+                "b8522d22a2033f85"
             ]
         ]
     },
@@ -7060,5 +7030,75 @@
         "x": 600,
         "y": 2500,
         "wires": []
+    },
+    {
+        "id": "b8522d22a2033f85",
+        "type": "rbe",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 4510,
+        "y": 260,
+        "wires": [
+            [
+                "80fb3035b2aeaf36",
+                "72cbb208ec799444",
+                "19233295b53b92b4"
+            ]
+        ]
+    },
+    {
+        "id": "19233295b53b92b4",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "Sending to RPi",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Sending to RPi",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4720,
+        "y": 220,
+        "wires": [
+            [
+                "07aa718300ae21e7"
+            ]
+        ]
+    },
+    {
+        "id": "d2dd2c9ee8e35d7c",
+        "type": "rbe",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 4510,
+        "y": 160,
+        "wires": [
+            [
+                "8a0c8ed070633cba",
+                "9af30707222648de"
+            ]
+        ]
     }
 ]
