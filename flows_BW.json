@@ -379,8 +379,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
         "x": 350,
@@ -404,7 +404,8 @@
         "wires": [
             [
                 "8043e13e12a166e5",
-                "c0896031c9517d0b"
+                "c0896031c9517d0b",
+                "63d6ceec38034cb8"
             ]
         ]
     },
@@ -412,7 +413,7 @@
         "id": "8043e13e12a166e5",
         "type": "debug",
         "z": "51d9a1627388b982",
-        "name": "",
+        "name": "AAAA",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -477,7 +478,8 @@
                 "6c0b09e406740e05",
                 "0ab9187a5115f0e0",
                 "ca10d2e243f380a4",
-                "9df9c982c3acd79f"
+                "9df9c982c3acd79f",
+                "1fe4af94c546c64a"
             ],
             [
                 "6c0b09e406740e05",
@@ -603,7 +605,9 @@
                 "7c50af5572611d22",
                 "47cbace1f063f615"
             ],
-            []
+            [
+                "47cbace1f063f615"
+            ]
         ]
     },
     {
@@ -820,7 +824,7 @@
         "wires": [
             [
                 "863fe273668e898c",
-                "63d6ceec38034cb8"
+                "5c0fba8c7eea187b"
             ]
         ]
     },
@@ -2486,7 +2490,8 @@
         "wires": [
             [
                 "2c24584d8595a489",
-                "801b2d49e6aba463"
+                "801b2d49e6aba463",
+                "210f02426c904c37"
             ]
         ]
     },
@@ -2522,8 +2527,7 @@
         "y": 2740,
         "wires": [
             [
-                "863fe273668e898c",
-                "210f02426c904c37"
+                "863fe273668e898c"
             ]
         ]
     },
@@ -2569,7 +2573,8 @@
         "wires": [
             [
                 "0e664487dd5c0305",
-                "5621034438d0fc38"
+                "5621034438d0fc38",
+                "e8fb5607ffc32ab7"
             ]
         ]
     },
@@ -2590,7 +2595,8 @@
         "wires": [
             [
                 "538a7367beecdcc9",
-                "a3383568fdf1ca2a"
+                "a3383568fdf1ca2a",
+                "52f8909a94699551"
             ]
         ]
     },
@@ -2611,7 +2617,8 @@
         "wires": [
             [
                 "bdd1864fd7e656dc",
-                "679db6fc415fcb2a"
+                "679db6fc415fcb2a",
+                "416dd316ce0b9156"
             ]
         ]
     },
@@ -2632,7 +2639,8 @@
         "wires": [
             [
                 "2aec27ea14606277",
-                "d63ad1172dd01db2"
+                "d63ad1172dd01db2",
+                "9dad01262c168efd"
             ]
         ]
     },
@@ -2675,30 +2683,6 @@
             [
                 "0ef7dee99e74510b",
                 "db22996ff5a27d22"
-            ]
-        ]
-    },
-    {
-        "id": "5621034438d0fc38",
-        "type": "function",
-        "z": "51d9a1627388b982",
-        "name": "",
-        "func": "var msg_lst = []\n\nfor (var key of Object.keys(msg.payload)) {\n    var temp = {}\n    temp.topic = key\n    temp.payload = msg.payload[key]\n    msg_lst.push(temp)\n}\n\nreturn msg_lst;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 340,
-        "y": 560,
-        "wires": [
-            [
-                "1fe4af94c546c64a",
-                "0ab9187a5115f0e0",
-                "2fdbb3a8895bf1cf",
-                "6c0b09e406740e05",
-                "c7728c450856bed4",
-                "e8fb5607ffc32ab7"
             ]
         ]
     },
@@ -2762,8 +2746,7 @@
                 "0ab9187a5115f0e0",
                 "f5e78be3c1ee0a93",
                 "ae29e39058290faf",
-                "58e910bc523c7de5",
-                "52f8909a94699551"
+                "58e910bc523c7de5"
             ]
         ]
     },
@@ -2980,7 +2963,7 @@
         "wires": [
             [
                 "c7728c450856bed4",
-                "416dd316ce0b9156"
+                "2ca8cf4b58dcb971"
             ]
         ]
     },
@@ -3041,8 +3024,7 @@
         "y": 1160,
         "wires": [
             [
-                "58e910bc523c7de5",
-                "9dad01262c168efd"
+                "58e910bc523c7de5"
             ]
         ]
     },
@@ -3357,7 +3339,7 @@
         "joinerType": "str",
         "accumulate": false,
         "timeout": "",
-        "count": "5",
+        "count": "6",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
@@ -6624,8 +6606,8 @@
         "links": [
             "c26a53e9bb47bf34"
         ],
-        "x": 2675,
-        "y": 1940,
+        "x": 2655,
+        "y": 1880,
         "wires": [
             [
                 "0faf491abe19e09b"
@@ -6897,7 +6879,7 @@
             "c26a53e9bb47bf34"
         ],
         "x": 2675,
-        "y": 2300,
+        "y": 2240,
         "wires": [
             [
                 "bd6726f8d9cba314"
@@ -7002,6 +6984,81 @@
         "statusType": "auto",
         "x": 330,
         "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "5b5508d3ca5b508c",
+        "type": "debug",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 620,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "2ca8cf4b58dcb971",
+        "type": "debug",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 600,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "5621034438d0fc38",
+        "type": "function",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "func": "var msg_lst = []\n\nfor (var key of Object.keys(msg.payload)) {\n    var temp = {}\n    temp.topic = key\n    temp.payload = msg.payload[key]\n    msg_lst.push(temp)\n    //console.log(msg_lst)\n}\n\nmsg.payload = msg_lst\nconsole.log(msg)\nreturn msg.payload;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 560,
+        "wires": [
+            [
+                "1fe4af94c546c64a",
+                "0ab9187a5115f0e0",
+                "2fdbb3a8895bf1cf",
+                "6c0b09e406740e05",
+                "c7728c450856bed4",
+                "5b5508d3ca5b508c"
+            ]
+        ]
+    },
+    {
+        "id": "5c0fba8c7eea187b",
+        "type": "debug",
+        "z": "51d9a1627388b982",
+        "name": "AAAAAAAA",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 600,
+        "y": 2500,
         "wires": []
     }
 ]
