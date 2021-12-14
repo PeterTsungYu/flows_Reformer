@@ -118,7 +118,7 @@
         "name": "Setting",
         "icon": "dashboard",
         "order": 1,
-        "disabled": true,
+        "disabled": false,
         "hidden": false
     },
     {
@@ -4637,7 +4637,7 @@
         "delay": "0",
         "topic": "Air_MFC_SET_SV",
         "topicType": "str",
-        "x": 2280,
+        "x": 2520,
         "y": 160,
         "wires": [
             [
@@ -4677,7 +4677,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 2520,
+        "x": 2760,
         "y": 160,
         "wires": [
             [
@@ -4687,7 +4687,7 @@
                 "46e11c949a707b5e"
             ],
             [
-                "dc6de1f1240a0a89"
+                "d9d469f827430dc2"
             ],
             [
                 "834c99a8875b924e"
@@ -4713,7 +4713,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2730,
+        "x": 2970,
         "y": 80,
         "wires": [
             [
@@ -4740,7 +4740,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2730,
+        "x": 2970,
         "y": 120,
         "wires": [
             [
@@ -4764,7 +4764,7 @@
         "delay": "0",
         "topic": "PCB_SET_SV",
         "topicType": "str",
-        "x": 2260,
+        "x": 2500,
         "y": 660,
         "wires": [
             [
@@ -4804,7 +4804,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 2450,
+        "x": 2690,
         "y": 660,
         "wires": [
             [
@@ -4814,7 +4814,8 @@
                 "c592a2fa7ef7ac55"
             ],
             [
-                "f08ea37681b97781"
+                "f08ea37681b97781",
+                "b1bb4b71840a60bb"
             ],
             [
                 "d3720d13d207d990"
@@ -4840,7 +4841,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2630,
+        "x": 2870,
         "y": 600,
         "wires": [
             [
@@ -4867,30 +4868,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2630,
+        "x": 2870,
         "y": 640,
         "wires": [
             [
                 "9b88f6cb504ba6c4"
             ]
         ]
-    },
-    {
-        "id": "dc6de1f1240a0a89",
-        "type": "debug",
-        "z": "51d9a1627388b982",
-        "name": "Air_MFC",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 2280,
-        "y": 40,
-        "wires": []
     },
     {
         "id": "d9d469f827430dc2",
@@ -4900,10 +4884,10 @@
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
+                "p": "Set.Air_MFC_SET_SV",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -4911,10 +4895,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2740,
-        "y": 200,
+        "x": 3050,
+        "y": 160,
         "wires": [
-            []
+            [
+                "a51aa350206d39da",
+                "d3f8636fba24f279"
+            ]
         ]
     },
     {
@@ -4930,7 +4917,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 2500,
+        "x": 2740,
         "y": 760,
         "wires": []
     },
@@ -4953,7 +4940,7 @@
         "payloadType": "num",
         "topic": "Air_MFC_SET_SV",
         "topicType": "str",
-        "x": 2050,
+        "x": 2290,
         "y": 40,
         "wires": [
             [
@@ -4980,7 +4967,7 @@
         "payloadType": "num",
         "topic": "Air_MFC_SET_SV",
         "topicType": "str",
-        "x": 2050,
+        "x": 2290,
         "y": 80,
         "wires": [
             [
@@ -5004,7 +4991,7 @@
         "delay": "0",
         "topic": "Pump_SET_SV",
         "topicType": "str",
-        "x": 2280,
+        "x": 2520,
         "y": 420,
         "wires": [
             [
@@ -5044,7 +5031,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 2510,
+        "x": 2750,
         "y": 420,
         "wires": [
             [
@@ -5054,7 +5041,7 @@
                 "835aec26e206852a"
             ],
             [
-                "3acc9046892943dc"
+                "d2efb279afe8b78b"
             ],
             [
                 "ee07013e63c7e6fc"
@@ -5080,7 +5067,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2730,
+        "x": 2970,
         "y": 340,
         "wires": [
             [
@@ -5107,54 +5094,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2730,
+        "x": 2970,
         "y": 380,
         "wires": [
             [
                 "2b78b0a022f0b4ec"
             ]
-        ]
-    },
-    {
-        "id": "3acc9046892943dc",
-        "type": "debug",
-        "z": "51d9a1627388b982",
-        "name": "Air_MFC",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 2280,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "3e334260979fa596",
-        "type": "change",
-        "z": "51d9a1627388b982",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2740,
-        "y": 460,
-        "wires": [
-            []
         ]
     },
     {
@@ -5176,7 +5121,7 @@
         "payloadType": "num",
         "topic": "Pump_SET_SV",
         "topicType": "str",
-        "x": 2000,
+        "x": 2240,
         "y": 300,
         "wires": [
             [
@@ -5203,7 +5148,7 @@
         "payloadType": "num",
         "topic": "Pump_SET_SV",
         "topicType": "str",
-        "x": 2010,
+        "x": 2250,
         "y": 340,
         "wires": [
             [
@@ -5230,7 +5175,7 @@
         "payloadType": "num",
         "topic": "Pump_SET_SV",
         "topicType": "str",
-        "x": 2010,
+        "x": 2250,
         "y": 380,
         "wires": [
             [
@@ -5253,11 +5198,11 @@
         "color": "",
         "bgcolor": "",
         "icon": "",
-        "payload": "38.5",
+        "payload": "57",
         "payloadType": "num",
         "topic": "Air_MFC_SET_SV",
         "topicType": "str",
-        "x": 2050,
+        "x": 2290,
         "y": 120,
         "wires": [
             [
@@ -5280,11 +5225,11 @@
         "color": "",
         "bgcolor": "",
         "icon": "",
-        "payload": "38.5",
+        "payload": "100",
         "payloadType": "num",
         "topic": "Air_MFC_SET_SV",
         "topicType": "str",
-        "x": 2050,
+        "x": 2290,
         "y": 160,
         "wires": [
             [
@@ -5307,11 +5252,11 @@
         "color": "",
         "bgcolor": "",
         "icon": "",
-        "payload": "38.5",
+        "payload": "150",
         "payloadType": "num",
         "topic": "Air_MFC_SET_SV",
         "topicType": "str",
-        "x": 2050,
+        "x": 2290,
         "y": 200,
         "wires": [
             [
@@ -5338,7 +5283,7 @@
         "payloadType": "num",
         "topic": "PCB_SET_SV",
         "topicType": "str",
-        "x": 1980,
+        "x": 2220,
         "y": 580,
         "wires": [
             [
@@ -5365,11 +5310,152 @@
         "payloadType": "num",
         "topic": "PCB_SET_SV",
         "topicType": "str",
-        "x": 1990,
+        "x": 2230,
         "y": 620,
         "wires": [
             [
                 "9b88f6cb504ba6c4"
+            ]
+        ]
+    },
+    {
+        "id": "d2efb279afe8b78b",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Set.Pump_SET_SV",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3040,
+        "y": 420,
+        "wires": [
+            [
+                "d3f8636fba24f279"
+            ]
+        ]
+    },
+    {
+        "id": "b1bb4b71840a60bb",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Set.PCB_SET_SV",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2940,
+        "y": 680,
+        "wires": [
+            [
+                "d3f8636fba24f279"
+            ]
+        ]
+    },
+    {
+        "id": "9aa9e6bb0c647e72",
+        "type": "function",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "func": "return msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3520,
+        "y": 280,
+        "wires": [
+            [
+                "9af30707222648de"
+            ]
+        ]
+    },
+    {
+        "id": "9af30707222648de",
+        "type": "debug",
+        "z": "51d9a1627388b982",
+        "name": "set flow",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 3700,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a51aa350206d39da",
+        "type": "debug",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 3340,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d3f8636fba24f279",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Set",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Setting",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3320,
+        "y": 280,
+        "wires": [
+            [
+                "9aa9e6bb0c647e72"
             ]
         ]
     }
