@@ -125,7 +125,7 @@
         "name": "Setting",
         "icon": "dashboard",
         "order": 1,
-        "disabled": true,
+        "disabled": false,
         "hidden": false
     },
     {
@@ -2215,11 +2215,11 @@
                 "14b1fb1417152427"
             ],
             [
-                "f13f0cd4b96c4daa",
                 "72e49b49bc7929be"
             ],
             [
-                "89144133c1781fef"
+                "89144133c1781fef",
+                "014ca97826a176fe"
             ]
         ]
     },
@@ -2302,7 +2302,7 @@
         "wires": [
             [],
             [
-                "2dbaccdc226ce9e4"
+                "c96f013bfb47584f"
             ],
             []
         ]
@@ -7151,8 +7151,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3180,
-        "y": 80,
+        "x": 3280,
+        "y": 100,
         "wires": [
             [
                 "b0e203e26a9f53ed"
@@ -7163,7 +7163,7 @@
         "id": "2dbaccdc226ce9e4",
         "type": "change",
         "z": "51d9a1627388b982",
-        "name": "Fail to run PY",
+        "name": "Fail to Stop PY",
         "rules": [
             {
                 "t": "set",
@@ -7178,8 +7178,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3180,
-        "y": 200,
+        "x": 3320,
+        "y": 260,
         "wires": [
             [
                 "b0e203e26a9f53ed"
@@ -7233,5 +7233,141 @@
         "x": 3220,
         "y": 440,
         "wires": []
+    },
+    {
+        "id": "014ca97826a176fe",
+        "type": "switch",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "property": "payload.code",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 3140,
+        "y": 60,
+        "wires": [
+            [
+                "6ba332bd326bc419"
+            ],
+            [
+                "f13f0cd4b96c4daa"
+            ]
+        ]
+    },
+    {
+        "id": "6ba332bd326bc419",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "Succeed to run PY",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Succeed to run PY",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3310,
+        "y": 20,
+        "wires": [
+            [
+                "502b8257aa1a38c4"
+            ]
+        ]
+    },
+    {
+        "id": "502b8257aa1a38c4",
+        "type": "ui_toast",
+        "z": "51d9a1627388b982",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "Succeed PY",
+        "name": "Succeed PY",
+        "x": 3530,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c96f013bfb47584f",
+        "type": "switch",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "property": "payload.code",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 3170,
+        "y": 180,
+        "wires": [
+            [
+                "7bdc2cf2290fe34b"
+            ],
+            [
+                "2dbaccdc226ce9e4"
+            ]
+        ]
+    },
+    {
+        "id": "7bdc2cf2290fe34b",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "Succeed to Stop PY",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Succeed to Stop PY",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3380,
+        "y": 180,
+        "wires": [
+            [
+                "502b8257aa1a38c4"
+            ]
+        ]
     }
 ]
