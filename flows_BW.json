@@ -1771,8 +1771,8 @@
         "topic": "NodeRed",
         "payload": "NodeRed",
         "payloadType": "flow",
-        "x": 4250,
-        "y": 700,
+        "x": 4270,
+        "y": 920,
         "wires": [
             [
                 "51f38ef1f5276f8f",
@@ -3459,8 +3459,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 4500,
-        "y": 640,
+        "x": 4520,
+        "y": 860,
         "wires": []
     },
     {
@@ -3613,8 +3613,8 @@
         "correl": "",
         "expiry": "",
         "broker": "f8aea8534f5e2a70",
-        "x": 4500,
-        "y": 700,
+        "x": 4520,
+        "y": 920,
         "wires": []
     },
     {
@@ -3628,8 +3628,8 @@
         "broker": "f8aea8534f5e2a70",
         "nl": false,
         "rap": false,
-        "x": 4700,
-        "y": 700,
+        "x": 4720,
+        "y": 920,
         "wires": [
             [
                 "bc0a1917f0a49e8c"
@@ -3649,8 +3649,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 4840,
-        "y": 700,
+        "x": 4860,
+        "y": 920,
         "wires": []
     },
     {
@@ -3726,7 +3726,7 @@
             ],
             [
                 "d9d469f827430dc2",
-                "492344664282c662"
+                "66ee7dfa0ad13b91"
             ]
         ]
     },
@@ -4566,27 +4566,6 @@
         ]
     },
     {
-        "id": "492344664282c662",
-        "type": "range",
-        "z": "51d9a1627388b982",
-        "minin": "0",
-        "maxin": "250",
-        "minout": "2047",
-        "maxout": "3071",
-        "action": "clamp",
-        "round": false,
-        "property": "payload",
-        "name": "0-250 to 0-5V (12bits)",
-        "x": 3420,
-        "y": 880,
-        "wires": [
-            [
-                "66ee7dfa0ad13b91",
-                "d0b561f351abac9b"
-            ]
-        ]
-    },
-    {
         "id": "66ee7dfa0ad13b91",
         "type": "change",
         "z": "51d9a1627388b982",
@@ -4594,7 +4573,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "Set_bit.Air_MFC_SET_SV",
+                "p": "MFC_Set.Air_MFC_SET_SV",
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
@@ -4605,7 +4584,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3700,
+        "x": 3470,
         "y": 880,
         "wires": [
             [
@@ -4617,12 +4596,11 @@
         "id": "c8ef431d11c5e86b",
         "type": "link out",
         "z": "51d9a1627388b982",
-        "name": "set_bit_out",
+        "name": "MFC_Set_out",
         "links": [
-            "188fca0cec60dbbe",
-            "2694c9a84dbccc72"
+            "fcc33b7cad0513c1"
         ],
-        "x": 3945,
+        "x": 3695,
         "y": 880,
         "wires": []
     },
@@ -4632,10 +4610,8 @@
         "z": "51d9a1627388b982",
         "name": "set_bit_in",
         "links": [
-            "c8ef431d11c5e86b",
             "b0952fbfacd44d9e",
             "b87e876a8db7c17b",
-            "f1013329d8171b20",
             "1fdeb8108f22d3fb",
             "fd42d96941012ad2",
             "c8c2aab467f2f570"
@@ -5182,7 +5158,7 @@
             ],
             [
                 "84d8da45f7ca7ca7",
-                "4370e4196eb5a999"
+                "a027702ed05566fc"
             ]
         ]
     },
@@ -5368,26 +5344,6 @@
         ]
     },
     {
-        "id": "4370e4196eb5a999",
-        "type": "range",
-        "z": "51d9a1627388b982",
-        "minin": "0",
-        "maxin": "100",
-        "minout": "2047",
-        "maxout": "3071",
-        "action": "clamp",
-        "round": false,
-        "property": "payload",
-        "name": "0-100 to 0-5V (12bits)",
-        "x": 3420,
-        "y": 1280,
-        "wires": [
-            [
-                "a027702ed05566fc"
-            ]
-        ]
-    },
-    {
         "id": "a027702ed05566fc",
         "type": "change",
         "z": "51d9a1627388b982",
@@ -5395,7 +5351,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "Set_bit.H2_MFC_SET_SV",
+                "p": "MFC_Set.H2_MFC_SET_SV",
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
@@ -5406,7 +5362,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3700,
+        "x": 3470,
         "y": 1280,
         "wires": [
             [
@@ -5418,12 +5374,11 @@
         "id": "f1013329d8171b20",
         "type": "link out",
         "z": "51d9a1627388b982",
-        "name": "set_bit_out",
+        "name": "MFC_Set_out",
         "links": [
-            "188fca0cec60dbbe",
-            "2694c9a84dbccc72"
+            "fcc33b7cad0513c1"
         ],
-        "x": 3945,
+        "x": 3695,
         "y": 1280,
         "wires": []
     },
@@ -8275,23 +8230,6 @@
         ]
     },
     {
-        "id": "d0b561f351abac9b",
-        "type": "debug",
-        "z": "51d9a1627388b982",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 3660,
-        "y": 960,
-        "wires": []
-    },
-    {
         "id": "0332fb292b956574",
         "type": "debug",
         "z": "51d9a1627388b982",
@@ -8307,5 +8245,158 @@
         "x": 330,
         "y": 1820,
         "wires": []
+    },
+    {
+        "id": "0dc43d1f91d5eb3f",
+        "type": "mqtt out",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "topic": "MFC_Set",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f8aea8534f5e2a70",
+        "x": 4700,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "d52a4eb70e80aa5c",
+        "type": "ui_toast",
+        "z": "51d9a1627388b982",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "MQTT pub",
+        "name": "MQTT pub",
+        "x": 4910,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "fcc33b7cad0513c1",
+        "type": "link in",
+        "z": "51d9a1627388b982",
+        "name": "MFC_Set_in",
+        "links": [
+            "c8ef431d11c5e86b",
+            "f1013329d8171b20"
+        ],
+        "x": 4175,
+        "y": 680,
+        "wires": [
+            [
+                "43588168386b6772"
+            ]
+        ]
+    },
+    {
+        "id": "28eec764ebe10208",
+        "type": "debug",
+        "z": "51d9a1627388b982",
+        "name": "MFC_Set flow",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 4720,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "43588168386b6772",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "MFC_Set",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "MFC_Set",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4340,
+        "y": 680,
+        "wires": [
+            [
+                "a91536ee2a56ead2"
+            ]
+        ]
+    },
+    {
+        "id": "a91536ee2a56ead2",
+        "type": "rbe",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 4510,
+        "y": 680,
+        "wires": [
+            [
+                "0dc43d1f91d5eb3f",
+                "28eec764ebe10208",
+                "d29d329e5cf25e6d"
+            ]
+        ]
+    },
+    {
+        "id": "d29d329e5cf25e6d",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "Sending to RPi",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Sending to RPi",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4720,
+        "y": 640,
+        "wires": [
+            [
+                "d52a4eb70e80aa5c"
+            ]
+        ]
     }
 ]
