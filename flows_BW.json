@@ -1347,7 +1347,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "x": 460,
-        "y": 3100,
+        "y": 3160,
         "wires": [
             []
         ]
@@ -1390,7 +1390,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "x": 460,
-        "y": 3240,
+        "y": 3300,
         "wires": [
             []
         ]
@@ -3340,8 +3340,8 @@
         "joiner": "\\n",
         "joinerType": "str",
         "accumulate": false,
-        "timeout": "0.5",
-        "count": "",
+        "timeout": "",
+        "count": "8",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
@@ -8416,40 +8416,6 @@
         ]
     },
     {
-        "id": "c6e6d6cdd220a095",
-        "type": "debug",
-        "z": "51d9a1627388b982",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 680,
-        "y": 3040,
-        "wires": []
-    },
-    {
-        "id": "f98668087128d8c2",
-        "type": "debug",
-        "z": "51d9a1627388b982",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 700,
-        "y": 3100,
-        "wires": []
-    },
-    {
         "id": "070647599904b778",
         "type": "mqtt in",
         "z": "51d9a1627388b982",
@@ -8483,14 +8449,22 @@
         "x": 280,
         "y": 3100,
         "wires": [
-            [],
-            [],
-            [],
             [
-                "fec3636bb3584a3f"
+                "831c31a01dd84676"
             ],
             [
-                "fec3636bb3584a3f"
+                "831c31a01dd84676"
+            ],
+            [
+                "831c31a01dd84676"
+            ],
+            [
+                "fec3636bb3584a3f",
+                "831c31a01dd84676"
+            ],
+            [
+                "fec3636bb3584a3f",
+                "831c31a01dd84676"
             ]
         ]
     },
@@ -8508,15 +8482,129 @@
         "x": 280,
         "y": 3240,
         "wires": [
-            [],
-            [],
-            [],
             [
-                "bebbe38f992f19d1"
+                "4163342e96327c89"
             ],
             [
-                "bebbe38f992f19d1"
+                "4163342e96327c89"
+            ],
+            [
+                "4163342e96327c89"
+            ],
+            [
+                "bebbe38f992f19d1",
+                "4163342e96327c89"
+            ],
+            [
+                "bebbe38f992f19d1",
+                "4163342e96327c89"
             ]
+        ]
+    },
+    {
+        "id": "831c31a01dd84676",
+        "type": "join",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "5",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 690,
+        "y": 3100,
+        "wires": [
+            [
+                "f8689fe3dae33cb6"
+            ]
+        ]
+    },
+    {
+        "id": "f8689fe3dae33cb6",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "NodeRed.Air_MFC",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 3100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4163342e96327c89",
+        "type": "join",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "5",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 690,
+        "y": 3240,
+        "wires": [
+            [
+                "5ffcb5dbbbcd571c"
+            ]
+        ]
+    },
+    {
+        "id": "5ffcb5dbbbcd571c",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "NodeRed.H2_MFC",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 3240,
+        "wires": [
+            []
         ]
     }
 ]
