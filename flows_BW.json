@@ -1768,7 +1768,7 @@
         "payload": "NodeRed",
         "payloadType": "flow",
         "x": 4270,
-        "y": 920,
+        "y": 1240,
         "wires": [
             [
                 "51f38ef1f5276f8f",
@@ -3456,7 +3456,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 4520,
-        "y": 860,
+        "y": 1180,
         "wires": []
     },
     {
@@ -3610,7 +3610,7 @@
         "expiry": "",
         "broker": "f8aea8534f5e2a70",
         "x": 4520,
-        "y": 920,
+        "y": 1240,
         "wires": []
     },
     {
@@ -3625,7 +3625,7 @@
         "nl": false,
         "rap": false,
         "x": 4720,
-        "y": 920,
+        "y": 1240,
         "wires": [
             [
                 "bc0a1917f0a49e8c"
@@ -3646,7 +3646,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 4860,
-        "y": 920,
+        "y": 1240,
         "wires": []
     },
     {
@@ -8605,6 +8605,247 @@
         "y": 3240,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "daf625565a5bfdd9",
+        "type": "ui_switch",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "label": "Relay01",
+        "tooltip": "",
+        "group": "887eab91629113f4",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 2620,
+        "y": 3100,
+        "wires": [
+            [
+                "b9bde8955441582e",
+                "77f9b296e37e5d89",
+                "d2a27cd8a7035c67"
+            ]
+        ]
+    },
+    {
+        "id": "b9bde8955441582e",
+        "type": "debug",
+        "z": "51d9a1627388b982",
+        "name": "relay",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 2870,
+        "y": 3140,
+        "wires": []
+    },
+    {
+        "id": "92bb94cf100673fd",
+        "type": "mqtt out",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "topic": "Relay_Set",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f8aea8534f5e2a70",
+        "x": 4710,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "24eeb79229369687",
+        "type": "debug",
+        "z": "51d9a1627388b982",
+        "name": "Relay01 flow",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 4710,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "29ed020334d67d52",
+        "type": "rbe",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 4510,
+        "y": 900,
+        "wires": [
+            [
+                "92bb94cf100673fd",
+                "24eeb79229369687",
+                "c4cb25052b266a7b"
+            ]
+        ]
+    },
+    {
+        "id": "d9ec3f63be7e2a33",
+        "type": "link in",
+        "z": "51d9a1627388b982",
+        "name": "Relay01_in",
+        "links": [
+            "77f9b296e37e5d89"
+        ],
+        "x": 4175,
+        "y": 900,
+        "wires": [
+            [
+                "4b81fdb0f73690a8"
+            ]
+        ]
+    },
+    {
+        "id": "3762f75a0ed60a7c",
+        "type": "ui_toast",
+        "z": "51d9a1627388b982",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "MQTT pub",
+        "name": "MQTT pub",
+        "x": 4910,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "c4cb25052b266a7b",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "Sending to rasp-001_subber",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Sending to rasp-001_subber",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4720,
+        "y": 840,
+        "wires": [
+            [
+                "3762f75a0ed60a7c"
+            ]
+        ]
+    },
+    {
+        "id": "77f9b296e37e5d89",
+        "type": "link out",
+        "z": "51d9a1627388b982",
+        "name": "Relay01_out",
+        "links": [
+            "d9ec3f63be7e2a33"
+        ],
+        "x": 2835,
+        "y": 3100,
+        "wires": []
+    },
+    {
+        "id": "d2a27cd8a7035c67",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Relay.Relay01_Set",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2940,
+        "y": 3060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4b81fdb0f73690a8",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Relay",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Relay",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4340,
+        "y": 900,
+        "wires": [
+            [
+                "29ed020334d67d52"
+            ]
         ]
     }
 ]
