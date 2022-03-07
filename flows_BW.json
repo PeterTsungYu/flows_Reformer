@@ -3765,7 +3765,7 @@
         "type": "ui_text_input",
         "z": "51d9a1627388b982",
         "name": "",
-        "label": "PCB (0-100%)",
+        "label": "PCB_AWG (0-100%)",
         "tooltip": "0-100%",
         "group": "cf349313ccf32d79",
         "order": 1,
@@ -3776,7 +3776,7 @@
         "delay": "0",
         "topic": "",
         "topicType": "str",
-        "x": 2860,
+        "x": 2840,
         "y": 1960,
         "wires": [
             [
@@ -3833,7 +3833,8 @@
             ],
             [
                 "b1bb4b71840a60bb",
-                "2e48af1ceae1996a"
+                "2e48af1ceae1996a",
+                "e0b85473920c9617"
             ]
         ]
     },
@@ -4025,7 +4026,8 @@
             [
                 "d2efb279afe8b78b",
                 "a70b5bfba9eae848",
-                "9eac6b31a6c1507a"
+                "9eac6b31a6c1507a",
+                "27686a5cf0dfebc8"
             ]
         ]
     },
@@ -4156,7 +4158,7 @@
         "payloadType": "num",
         "topic": "",
         "topicType": "str",
-        "x": 2580,
+        "x": 2540,
         "y": 1880,
         "wires": [
             [
@@ -4183,7 +4185,7 @@
         "payloadType": "num",
         "topic": "",
         "topicType": "str",
-        "x": 2590,
+        "x": 2550,
         "y": 1920,
         "wires": [
             [
@@ -4465,7 +4467,7 @@
             "fa21785195c7ad34"
         ],
         "x": 3335,
-        "y": 1760,
+        "y": 1840,
         "wires": []
     },
     {
@@ -4610,7 +4612,8 @@
             "b87e876a8db7c17b",
             "1fdeb8108f22d3fb",
             "fd42d96941012ad2",
-            "c8c2aab467f2f570"
+            "c8c2aab467f2f570",
+            "e2543fa5f60b2fbe"
         ],
         "x": 4175,
         "y": 280,
@@ -4643,7 +4646,8 @@
             "5328b06787bad66e",
             "fdf325415fa69878",
             "176fdb7374173bca",
-            "1a521a862f01008f"
+            "1a521a862f01008f",
+            "60153ea08024dbf9"
         ],
         "x": 4175,
         "y": 180,
@@ -5058,7 +5062,7 @@
         "y": 1960,
         "wires": [
             [
-                "d3720d13d207d990"
+                "f05d44de816a7fef"
             ],
             [
                 "da48ee5d9ce10154"
@@ -5073,12 +5077,11 @@
         "links": [
             "c26a53e9bb47bf34"
         ],
-        "x": 2675,
-        "y": 2060,
+        "x": 2635,
+        "y": 2100,
         "wires": [
             [
-                "9b88f6cb504ba6c4",
-                "1f31700836cbc382"
+                "9b88f6cb504ba6c4"
             ]
         ]
     },
@@ -6356,23 +6359,6 @@
                 "502b8257aa1a38c4"
             ]
         ]
-    },
-    {
-        "id": "1f31700836cbc382",
-        "type": "debug",
-        "z": "51d9a1627388b982",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 2790,
-        "y": 2060,
-        "wires": []
     },
     {
         "id": "5d41b4dc83a2ed35",
@@ -7839,7 +7825,8 @@
         "z": "51d9a1627388b982",
         "name": "ADDA_out",
         "links": [
-            "0db7c131d5c963ac"
+            "0db7c131d5c963ac",
+            "4cbdab5293dfa6be"
         ],
         "x": 3835,
         "y": 1720,
@@ -8847,5 +8834,357 @@
                 "29ed020334d67d52"
             ]
         ]
+    },
+    {
+        "id": "529dffe15654032d",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "miniModbus.BRPump_Flow_SV",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3660,
+        "y": 1760,
+        "wires": [
+            [
+                "ab02fbe0a02ddeda"
+            ]
+        ]
+    },
+    {
+        "id": "667d8ffa2bd37a36",
+        "type": "mqtt out",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "topic": "BRPump_Set",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f8aea8534f5e2a70",
+        "x": 4720,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "00f78b202bed5d73",
+        "type": "debug",
+        "z": "51d9a1627388b982",
+        "name": "minimodbus flow",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 4730,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "43d29f93d4da3d7f",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "miniModbus",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "miniModbus",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4340,
+        "y": 1420,
+        "wires": [
+            [
+                "917f56c377117a6a"
+            ]
+        ]
+    },
+    {
+        "id": "917f56c377117a6a",
+        "type": "rbe",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 4510,
+        "y": 1420,
+        "wires": [
+            [
+                "667d8ffa2bd37a36",
+                "00f78b202bed5d73",
+                "aed498ecd9fc7616"
+            ]
+        ]
+    },
+    {
+        "id": "23066d7f56f35dcd",
+        "type": "ui_toast",
+        "z": "51d9a1627388b982",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "MQTT pub",
+        "name": "MQTT pub",
+        "x": 4910,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "aed498ecd9fc7616",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "Sending to rasp-001_subber",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Sending to rasp-001_subber",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 4720,
+        "y": 1360,
+        "wires": [
+            [
+                "23066d7f56f35dcd"
+            ]
+        ]
+    },
+    {
+        "id": "ab02fbe0a02ddeda",
+        "type": "link out",
+        "z": "51d9a1627388b982",
+        "name": "miniModbus_out",
+        "links": [
+            "75b94edfcb010c97"
+        ],
+        "x": 3895,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "75b94edfcb010c97",
+        "type": "link in",
+        "z": "51d9a1627388b982",
+        "name": "Relay01_in",
+        "links": [
+            "ab02fbe0a02ddeda"
+        ],
+        "x": 4195,
+        "y": 1420,
+        "wires": [
+            [
+                "43d29f93d4da3d7f"
+            ]
+        ]
+    },
+    {
+        "id": "27686a5cf0dfebc8",
+        "type": "function",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "func": "if (msg.payload == 0) {\n  msg.payload = 0;\n} else {\n  msg.payload = msg.payload / 0.79 ;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3410,
+        "y": 1760,
+        "wires": [
+            [
+                "529dffe15654032d"
+            ]
+        ]
+    },
+    {
+        "id": "57d2e936383b9b94",
+        "type": "ui_text_input",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "label": "PCB_Out (0-100%)",
+        "tooltip": "0-100%",
+        "group": "cf349313ccf32d79",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "number",
+        "delay": "0",
+        "topic": "",
+        "topicType": "str",
+        "x": 2830,
+        "y": 2020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0b85473920c9617",
+        "type": "function",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3390,
+        "y": 2120,
+        "wires": [
+            [
+                "57d2e936383b9b94",
+                "361dea017c58c5b1",
+                "b91df2d36aed5e02"
+            ]
+        ]
+    },
+    {
+        "id": "361dea017c58c5b1",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Set.PCB_SET_SV",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3680,
+        "y": 2140,
+        "wires": [
+            [
+                "60153ea08024dbf9"
+            ]
+        ]
+    },
+    {
+        "id": "60153ea08024dbf9",
+        "type": "link out",
+        "z": "51d9a1627388b982",
+        "name": "set_out",
+        "links": [
+            "7974035af43fd2fd"
+        ],
+        "x": 3895,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "b91df2d36aed5e02",
+        "type": "range",
+        "z": "51d9a1627388b982",
+        "minin": "0",
+        "maxin": "100",
+        "minout": "2047",
+        "maxout": "4095",
+        "action": "clamp",
+        "round": false,
+        "property": "payload",
+        "name": "0-100% to 0-10V (12bits)",
+        "x": 3670,
+        "y": 2180,
+        "wires": [
+            [
+                "f83f5163dd601d84"
+            ]
+        ]
+    },
+    {
+        "id": "f83f5163dd601d84",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Set_bit.PCB_SET_SV",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 3970,
+        "y": 2180,
+        "wires": [
+            [
+                "e2543fa5f60b2fbe"
+            ]
+        ]
+    },
+    {
+        "id": "e2543fa5f60b2fbe",
+        "type": "link out",
+        "z": "51d9a1627388b982",
+        "name": "set_bit_out",
+        "links": [
+            "188fca0cec60dbbe",
+            "2694c9a84dbccc72"
+        ],
+        "x": 4165,
+        "y": 2180,
+        "wires": []
     }
 ]
