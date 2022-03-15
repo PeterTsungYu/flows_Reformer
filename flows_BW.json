@@ -692,6 +692,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 130,
         "y": 2320,
         "wires": [
@@ -2682,6 +2683,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 160,
         "y": 260,
         "wires": [
@@ -2703,6 +2705,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 140,
         "y": 2680,
         "wires": [
@@ -2786,6 +2789,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 150,
         "y": 560,
         "wires": [
@@ -2808,6 +2812,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 150,
         "y": 760,
         "wires": [
@@ -2830,6 +2835,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 130,
         "y": 940,
         "wires": [
@@ -2852,6 +2858,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 140,
         "y": 1160,
         "wires": [
@@ -2874,6 +2881,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 130,
         "y": 1380,
         "wires": [
@@ -2895,6 +2903,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 130,
         "y": 1600,
         "wires": [
@@ -3260,6 +3269,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 130,
         "y": 2040,
         "wires": [
@@ -3757,6 +3767,7 @@
         "broker": "f8aea8534f5e2a70",
         "nl": false,
         "rap": false,
+        "inputs": 0,
         "x": 4720,
         "y": 1240,
         "wires": [
@@ -6565,6 +6576,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 140,
         "y": 2940,
         "wires": [
@@ -6607,6 +6619,7 @@
         "randomUnits": "seconds",
         "drop": true,
         "allowrate": false,
+        "outputs": 1,
         "x": 1530,
         "y": 700,
         "wires": [
@@ -6631,6 +6644,7 @@
         "randomUnits": "seconds",
         "drop": true,
         "allowrate": false,
+        "outputs": 1,
         "x": 850,
         "y": 2260,
         "wires": [
@@ -6651,6 +6665,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 140,
         "y": 3420,
         "wires": [
@@ -6693,6 +6708,7 @@
         "randomUnits": "seconds",
         "drop": true,
         "allowrate": false,
+        "outputs": 1,
         "x": 1530,
         "y": 820,
         "wires": [
@@ -6717,6 +6733,7 @@
         "randomUnits": "seconds",
         "drop": true,
         "allowrate": false,
+        "outputs": 1,
         "x": 1530,
         "y": 860,
         "wires": [
@@ -6741,6 +6758,7 @@
         "randomUnits": "seconds",
         "drop": true,
         "allowrate": false,
+        "outputs": 1,
         "x": 1530,
         "y": 900,
         "wires": [
@@ -6798,973 +6816,6 @@
         "statusType": "auto",
         "x": 1940,
         "y": 820,
-        "wires": []
-    },
-    {
-        "id": "73b1d35641b25ed8",
-        "type": "mqtt in",
-        "z": "80fed7c6aa4d30d0",
-        "name": "",
-        "topic": "Manual_Input",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "f8aea8534f5e2a70",
-        "nl": false,
-        "rap": false,
-        "x": 2450,
-        "y": 400,
-        "wires": [
-            [
-                "17375528bb8dad00"
-            ]
-        ]
-    },
-    {
-        "id": "17375528bb8dad00",
-        "type": "debug",
-        "z": "80fed7c6aa4d30d0",
-        "name": "nodered_port",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 2690,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "f62dd3ca40e9d586",
-        "type": "mqtt out",
-        "z": "80fed7c6aa4d30d0",
-        "name": "",
-        "topic": "Manual_Input",
-        "qos": "0",
-        "retain": "true",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "f8aea8534f5e2a70",
-        "x": 2220,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "7b987c4b7f06d4bf",
-        "type": "ui_form",
-        "z": "80fed7c6aa4d30d0",
-        "name": "",
-        "label": "Manual_Input",
-        "group": "f7b9b84f65a2452b",
-        "order": 1,
-        "width": 15,
-        "height": 1,
-        "options": [
-            {
-                "label": "Header_EVA_SV (>=0 oC)",
-                "value": "Header_EVA_SV",
-                "type": "number",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "Header_BR_SV (>=0 oC)",
-                "value": "Header_BR_SV",
-                "type": "number",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "PCB_SET_SV (0-100%)",
-                "value": "PCB_SET_SV",
-                "type": "number",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "Pump_SET_SV (0-120 cc/min)",
-                "value": "Pump_SET_SV",
-                "type": "number",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "Air_MFC_SET_SV (0-250 LPM)",
-                "value": "Air_MFC_SET_SV",
-                "type": "number",
-                "required": false,
-                "rows": null
-            },
-            {
-                "label": "H2_MFC_SET_SV (0-100 LPM)",
-                "value": "H2_MFC_SET_SV",
-                "type": "number",
-                "required": false,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "Header_EVA_SV": "",
-            "Header_BR_SV": "",
-            "PCB_SET_SV": "",
-            "Pump_SET_SV": "",
-            "Air_MFC_SET_SV": "",
-            "H2_MFC_SET_SV": ""
-        },
-        "payload": "",
-        "submit": "submit",
-        "cancel": "cancel",
-        "topic": "topic",
-        "topicType": "msg",
-        "splitLayout": false,
-        "x": 520,
-        "y": 520,
-        "wires": [
-            [
-                "5922f0266aca4e18",
-                "aaae5d0bfa1ba085",
-                "591d4e526bbce490"
-            ]
-        ]
-    },
-    {
-        "id": "aaae5d0bfa1ba085",
-        "type": "debug",
-        "z": "80fed7c6aa4d30d0",
-        "name": "form",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 690,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "5922f0266aca4e18",
-        "type": "split",
-        "z": "80fed7c6aa4d30d0",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "topic",
-        "x": 690,
-        "y": 520,
-        "wires": [
-            [
-                "b283e314fc515f47",
-                "953bf0eb4fdcd854"
-            ]
-        ]
-    },
-    {
-        "id": "b283e314fc515f47",
-        "type": "switch",
-        "z": "80fed7c6aa4d30d0",
-        "name": "",
-        "property": "parts.key",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Header_EVA_SV",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Header_BR_SV",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "PCB_SET_SV",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Pump_SET_SV",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Air_MFC_SET_SV",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "H2_MFC_SET_SV",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 6,
-        "x": 870,
-        "y": 520,
-        "wires": [
-            [
-                "213a7d9c9dc4a80c"
-            ],
-            [
-                "97534dc561f1437d"
-            ],
-            [
-                "42526c4a82ec3eac"
-            ],
-            [
-                "66ccfc14d584c16a"
-            ],
-            [
-                "fe9b4a0717f42265"
-            ],
-            [
-                "daf8d16023f408e7"
-            ]
-        ]
-    },
-    {
-        "id": "97534dc561f1437d",
-        "type": "switch",
-        "z": "80fed7c6aa4d30d0",
-        "name": "Header_BR cond",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "gte",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "lt",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 3,
-        "x": 1150,
-        "y": 380,
-        "wires": [
-            [
-                "5507a820fc5e882b"
-            ],
-            [
-                "44193cd74c3aed93"
-            ],
-            [
-                "2d20c3571adb1c7c"
-            ]
-        ]
-    },
-    {
-        "id": "44193cd74c3aed93",
-        "type": "join",
-        "z": "80fed7c6aa4d30d0",
-        "name": "",
-        "mode": "auto",
-        "build": "object",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": true,
-        "timeout": "",
-        "count": "",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 2010,
-        "y": 340,
-        "wires": [
-            [
-                "4cbaa46926c342e6",
-                "f62dd3ca40e9d586",
-                "a51eef0ee722fa63"
-            ]
-        ]
-    },
-    {
-        "id": "17faba750bc2f9a9",
-        "type": "change",
-        "z": "80fed7c6aa4d30d0",
-        "name": "Set Null to 2047",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "2047",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1620,
-        "y": 660,
-        "wires": [
-            [
-                "44193cd74c3aed93"
-            ]
-        ]
-    },
-    {
-        "id": "42526c4a82ec3eac",
-        "type": "switch",
-        "z": "80fed7c6aa4d30d0",
-        "name": "PCB",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "btwn",
-                "v": "0",
-                "vt": "num",
-                "v2": "100",
-                "v2t": "num"
-            },
-            {
-                "t": "lt",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "gt",
-                "v": "100",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 4,
-        "x": 1110,
-        "y": 440,
-        "wires": [
-            [
-                "17faba750bc2f9a9"
-            ],
-            [
-                "1b059f26314128c8"
-            ],
-            [
-                "2d20c3571adb1c7c"
-            ],
-            [
-                "2d20c3571adb1c7c"
-            ]
-        ]
-    },
-    {
-        "id": "66ccfc14d584c16a",
-        "type": "switch",
-        "z": "80fed7c6aa4d30d0",
-        "name": "KNF Pump Cond",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "btwn",
-                "v": "0",
-                "vt": "num",
-                "v2": "120",
-                "v2t": "num"
-            },
-            {
-                "t": "lt",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "gt",
-                "v": "120",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 4,
-        "x": 1150,
-        "y": 520,
-        "wires": [
-            [
-                "17faba750bc2f9a9"
-            ],
-            [
-                "b34ac5bb74047753",
-                "e51a446ebcd5c35a"
-            ],
-            [
-                "2d20c3571adb1c7c"
-            ],
-            [
-                "2d20c3571adb1c7c"
-            ]
-        ]
-    },
-    {
-        "id": "fe9b4a0717f42265",
-        "type": "switch",
-        "z": "80fed7c6aa4d30d0",
-        "name": "250-MFC Cond",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "btwn",
-                "v": "0",
-                "vt": "num",
-                "v2": "250",
-                "v2t": "num"
-            },
-            {
-                "t": "lt",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "gt",
-                "v": "250",
-                "vt": "num"
-            },
-            {
-                "t": "gt",
-                "v": "200",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 5,
-        "x": 1140,
-        "y": 600,
-        "wires": [
-            [
-                "17faba750bc2f9a9"
-            ],
-            [
-                "60e8ea34b49c0487"
-            ],
-            [
-                "2d20c3571adb1c7c"
-            ],
-            [
-                "2d20c3571adb1c7c"
-            ],
-            [
-                "f184e161d90af174"
-            ]
-        ]
-    },
-    {
-        "id": "daf8d16023f408e7",
-        "type": "switch",
-        "z": "80fed7c6aa4d30d0",
-        "name": "100-MFC Cond",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "btwn",
-                "v": "0",
-                "vt": "num",
-                "v2": "100",
-                "v2t": "num"
-            },
-            {
-                "t": "lt",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "gt",
-                "v": "100",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 4,
-        "x": 1140,
-        "y": 680,
-        "wires": [
-            [
-                "17faba750bc2f9a9"
-            ],
-            [
-                "01fa960d84babe33"
-            ],
-            [
-                "2d20c3571adb1c7c"
-            ],
-            [
-                "2d20c3571adb1c7c"
-            ]
-        ]
-    },
-    {
-        "id": "4cbaa46926c342e6",
-        "type": "debug",
-        "z": "80fed7c6aa4d30d0",
-        "name": "MQTT pub",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 2210,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "953bf0eb4fdcd854",
-        "type": "debug",
-        "z": "80fed7c6aa4d30d0",
-        "name": "split set",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 820,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "2d20c3571adb1c7c",
-        "type": "ui_toast",
-        "z": "80fed7c6aa4d30d0",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 1,
-        "ok": "Again",
-        "cancel": "",
-        "raw": false,
-        "topic": "",
-        "name": "Wrong Set",
-        "x": 1610,
-        "y": 700,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ab68f506023dafb2",
-        "type": "ui_toast",
-        "z": "80fed7c6aa4d30d0",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "topic": "MQTT pub",
-        "name": "MQTT pub",
-        "x": 2450,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "a51eef0ee722fa63",
-        "type": "change",
-        "z": "80fed7c6aa4d30d0",
-        "name": "Sending to RPi",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Sending to RPi",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2220,
-        "y": 340,
-        "wires": [
-            [
-                "ab68f506023dafb2"
-            ]
-        ]
-    },
-    {
-        "id": "213a7d9c9dc4a80c",
-        "type": "switch",
-        "z": "80fed7c6aa4d30d0",
-        "name": "Header_EVA cond",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "gte",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "lt",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 3,
-        "x": 1150,
-        "y": 320,
-        "wires": [
-            [
-                "5507a820fc5e882b"
-            ],
-            [
-                "44193cd74c3aed93"
-            ],
-            [
-                "2d20c3571adb1c7c"
-            ]
-        ]
-    },
-    {
-        "id": "1b059f26314128c8",
-        "type": "range",
-        "z": "80fed7c6aa4d30d0",
-        "minin": "0",
-        "maxin": "100",
-        "minout": "2047",
-        "maxout": "4095",
-        "action": "clamp",
-        "round": false,
-        "property": "payload",
-        "name": "0-100% to 0-10V (12bits)",
-        "x": 1650,
-        "y": 420,
-        "wires": [
-            [
-                "44193cd74c3aed93"
-            ]
-        ]
-    },
-    {
-        "id": "b34ac5bb74047753",
-        "type": "range",
-        "z": "80fed7c6aa4d30d0",
-        "d": true,
-        "minin": "0",
-        "maxin": "120",
-        "minout": "2047",
-        "maxout": "3071",
-        "action": "clamp",
-        "round": false,
-        "property": "payload",
-        "name": "0-120 to 0-5V (12bits)",
-        "x": 1640,
-        "y": 460,
-        "wires": [
-            [
-                "44193cd74c3aed93",
-                "85343ec0cdde3ab5"
-            ]
-        ]
-    },
-    {
-        "id": "60e8ea34b49c0487",
-        "type": "range",
-        "z": "80fed7c6aa4d30d0",
-        "minin": "0",
-        "maxin": "250",
-        "minout": "2047",
-        "maxout": "3071",
-        "action": "clamp",
-        "round": false,
-        "property": "payload",
-        "name": "0-250 to 0-5V (12bits)",
-        "x": 1640,
-        "y": 540,
-        "wires": [
-            [
-                "44193cd74c3aed93"
-            ]
-        ]
-    },
-    {
-        "id": "01fa960d84babe33",
-        "type": "range",
-        "z": "80fed7c6aa4d30d0",
-        "minin": "0",
-        "maxin": "100",
-        "minout": "2047",
-        "maxout": "3071",
-        "action": "clamp",
-        "round": false,
-        "property": "payload",
-        "name": "0-100 to 0-5V (12bits)",
-        "x": 1640,
-        "y": 580,
-        "wires": [
-            [
-                "44193cd74c3aed93"
-            ]
-        ]
-    },
-    {
-        "id": "85343ec0cdde3ab5",
-        "type": "debug",
-        "z": "80fed7c6aa4d30d0",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 2030,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "5507a820fc5e882b",
-        "type": "change",
-        "z": "80fed7c6aa4d30d0",
-        "name": "Set null to 0",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "0",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1610,
-        "y": 620,
-        "wires": [
-            [
-                "44193cd74c3aed93"
-            ]
-        ]
-    },
-    {
-        "id": "591d4e526bbce490",
-        "type": "change",
-        "z": "80fed7c6aa4d30d0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "NodeRed.Manual_Input",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 770,
-        "y": 740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e51a446ebcd5c35a",
-        "type": "function",
-        "z": "80fed7c6aa4d30d0",
-        "name": "",
-        "func": "msg.payload = (msg.payload - 1.04) / 14.3\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1600,
-        "y": 500,
-        "wires": [
-            [
-                "85343ec0cdde3ab5",
-                "d5c5404c3f893a22"
-            ]
-        ]
-    },
-    {
-        "id": "d5c5404c3f893a22",
-        "type": "range",
-        "z": "80fed7c6aa4d30d0",
-        "minin": "0",
-        "maxin": "5",
-        "minout": "2047",
-        "maxout": "3071",
-        "action": "clamp",
-        "round": false,
-        "property": "payload",
-        "name": "",
-        "x": 1750,
-        "y": 500,
-        "wires": [
-            [
-                "44193cd74c3aed93"
-            ]
-        ]
-    },
-    {
-        "id": "f184e161d90af174",
-        "type": "ui_toast",
-        "z": "80fed7c6aa4d30d0",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 1,
-        "ok": "Noticed",
-        "cancel": "",
-        "raw": false,
-        "topic": "",
-        "name": "BW reformer air 200LPM max",
-        "x": 1670,
-        "y": 740,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0e1fc816b016be8f",
-        "type": "function",
-        "z": "80fed7c6aa4d30d0",
-        "name": "",
-        "func": "var lst = [msg.Manual_Input, msg.Setup_port, msg.RS485_port, msg.Scale_port, msg.RS232_port, msg.GPIO_port]\nvar len = lst.length;\nmsg.lst = []\n\nfor (var i = 0; i < len; i++) {\n    for (var key in lst[i]) {\n        if (lst[i].hasOwnProperty(key)) {\n            msg.lst.push(lst[i][key])\n        }\n    }\n}\n\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 550,
-        "y": 940,
-        "wires": [
-            [
-                "8e78edd3a81a1e9a"
-            ]
-        ]
-    },
-    {
-        "id": "8e78edd3a81a1e9a",
-        "type": "change",
-        "z": "80fed7c6aa4d30d0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "lst",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 790,
-        "y": 940,
-        "wires": [
-            [
-                "fb073055686822b1"
-            ]
-        ]
-    },
-    {
-        "id": "fb073055686822b1",
-        "type": "GSheet",
-        "z": "80fed7c6aa4d30d0",
-        "d": true,
-        "creds": "700453c3.f1167c",
-        "method": "append",
-        "action": "",
-        "sheet": "1lOTmshcxpiFN5gS1Imb9cQJEx7GGZsbWBz4XVL5EG4w",
-        "cells": "Sheet1",
-        "flatten": false,
-        "name": "",
-        "x": 1040,
-        "y": 940,
-        "wires": [
-            [
-                "8d39a83e02550c31"
-            ]
-        ]
-    },
-    {
-        "id": "8d39a83e02550c31",
-        "type": "debug",
-        "z": "80fed7c6aa4d30d0",
-        "name": "gsheet",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1260,
-        "y": 940,
         "wires": []
     },
     {
@@ -7989,6 +7040,7 @@
         "id": "ad97d8507742c975",
         "type": "mqtt out",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "topic": "Exe_Subber",
         "qos": "0",
@@ -8213,6 +7265,7 @@
         "id": "effc9a3c8c22b040",
         "type": "mqtt in",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "topic": "Start_Subber",
         "qos": "0",
@@ -8221,6 +7274,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 2910,
         "y": 340,
         "wires": [
@@ -8234,6 +7288,7 @@
         "id": "0938154690cecfb9",
         "type": "mqtt in",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "topic": "Stop_Subber",
         "qos": "0",
@@ -8242,6 +7297,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 2910,
         "y": 420,
         "wires": [
@@ -8486,6 +7542,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 120,
         "y": 3100,
         "wires": [
@@ -8506,6 +7563,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 120,
         "y": 3240,
         "wires": [
@@ -9507,6 +8565,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 130,
         "y": 2500,
         "wires": [
@@ -9648,6 +8707,7 @@
         "randomUnits": "seconds",
         "drop": true,
         "allowrate": false,
+        "outputs": 1,
         "x": 730,
         "y": 2840,
         "wires": [
@@ -9702,6 +8762,7 @@
         "nl": false,
         "rap": true,
         "rh": 0,
+        "inputs": 0,
         "x": 170,
         "y": 3560,
         "wires": [
@@ -9725,6 +8786,974 @@
         "statusType": "auto",
         "x": 410,
         "y": 3540,
+        "wires": []
+    },
+    {
+        "id": "73b1d35641b25ed8",
+        "type": "mqtt in",
+        "z": "80fed7c6aa4d30d0",
+        "name": "",
+        "topic": "Manual_Input",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "f8aea8534f5e2a70",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 2450,
+        "y": 400,
+        "wires": [
+            [
+                "17375528bb8dad00"
+            ]
+        ]
+    },
+    {
+        "id": "17375528bb8dad00",
+        "type": "debug",
+        "z": "80fed7c6aa4d30d0",
+        "name": "nodered_port",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 2690,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "f62dd3ca40e9d586",
+        "type": "mqtt out",
+        "z": "80fed7c6aa4d30d0",
+        "name": "",
+        "topic": "Manual_Input",
+        "qos": "0",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f8aea8534f5e2a70",
+        "x": 2220,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "7b987c4b7f06d4bf",
+        "type": "ui_form",
+        "z": "80fed7c6aa4d30d0",
+        "name": "",
+        "label": "Manual_Input",
+        "group": "f7b9b84f65a2452b",
+        "order": 1,
+        "width": 15,
+        "height": 1,
+        "options": [
+            {
+                "label": "Header_EVA_SV (>=0 oC)",
+                "value": "Header_EVA_SV",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Header_BR_SV (>=0 oC)",
+                "value": "Header_BR_SV",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "PCB_SET_SV (0-100%)",
+                "value": "PCB_SET_SV",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Pump_SET_SV (0-120 cc/min)",
+                "value": "Pump_SET_SV",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Air_MFC_SET_SV (0-250 LPM)",
+                "value": "Air_MFC_SET_SV",
+                "type": "number",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "H2_MFC_SET_SV (0-100 LPM)",
+                "value": "H2_MFC_SET_SV",
+                "type": "number",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "Header_EVA_SV": "",
+            "Header_BR_SV": "",
+            "PCB_SET_SV": "",
+            "Pump_SET_SV": "",
+            "Air_MFC_SET_SV": "",
+            "H2_MFC_SET_SV": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "x": 520,
+        "y": 520,
+        "wires": [
+            [
+                "5922f0266aca4e18",
+                "aaae5d0bfa1ba085",
+                "591d4e526bbce490"
+            ]
+        ]
+    },
+    {
+        "id": "aaae5d0bfa1ba085",
+        "type": "debug",
+        "z": "80fed7c6aa4d30d0",
+        "name": "form",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 690,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "5922f0266aca4e18",
+        "type": "split",
+        "z": "80fed7c6aa4d30d0",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "topic",
+        "x": 690,
+        "y": 520,
+        "wires": [
+            [
+                "b283e314fc515f47",
+                "953bf0eb4fdcd854"
+            ]
+        ]
+    },
+    {
+        "id": "b283e314fc515f47",
+        "type": "switch",
+        "z": "80fed7c6aa4d30d0",
+        "name": "",
+        "property": "parts.key",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Header_EVA_SV",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Header_BR_SV",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PCB_SET_SV",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Pump_SET_SV",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Air_MFC_SET_SV",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "H2_MFC_SET_SV",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 870,
+        "y": 520,
+        "wires": [
+            [
+                "213a7d9c9dc4a80c"
+            ],
+            [
+                "97534dc561f1437d"
+            ],
+            [
+                "42526c4a82ec3eac"
+            ],
+            [
+                "66ccfc14d584c16a"
+            ],
+            [
+                "fe9b4a0717f42265"
+            ],
+            [
+                "daf8d16023f408e7"
+            ]
+        ]
+    },
+    {
+        "id": "97534dc561f1437d",
+        "type": "switch",
+        "z": "80fed7c6aa4d30d0",
+        "name": "Header_BR cond",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "gte",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 1150,
+        "y": 380,
+        "wires": [
+            [
+                "5507a820fc5e882b"
+            ],
+            [
+                "44193cd74c3aed93"
+            ],
+            [
+                "2d20c3571adb1c7c"
+            ]
+        ]
+    },
+    {
+        "id": "44193cd74c3aed93",
+        "type": "join",
+        "z": "80fed7c6aa4d30d0",
+        "name": "",
+        "mode": "auto",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 2010,
+        "y": 340,
+        "wires": [
+            [
+                "4cbaa46926c342e6",
+                "f62dd3ca40e9d586",
+                "a51eef0ee722fa63"
+            ]
+        ]
+    },
+    {
+        "id": "17faba750bc2f9a9",
+        "type": "change",
+        "z": "80fed7c6aa4d30d0",
+        "name": "Set Null to 2047",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "2047",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1620,
+        "y": 660,
+        "wires": [
+            [
+                "44193cd74c3aed93"
+            ]
+        ]
+    },
+    {
+        "id": "42526c4a82ec3eac",
+        "type": "switch",
+        "z": "80fed7c6aa4d30d0",
+        "name": "PCB",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "btwn",
+                "v": "0",
+                "vt": "num",
+                "v2": "100",
+                "v2t": "num"
+            },
+            {
+                "t": "lt",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "100",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 4,
+        "x": 1110,
+        "y": 440,
+        "wires": [
+            [
+                "17faba750bc2f9a9"
+            ],
+            [
+                "1b059f26314128c8"
+            ],
+            [
+                "2d20c3571adb1c7c"
+            ],
+            [
+                "2d20c3571adb1c7c"
+            ]
+        ]
+    },
+    {
+        "id": "66ccfc14d584c16a",
+        "type": "switch",
+        "z": "80fed7c6aa4d30d0",
+        "name": "KNF Pump Cond",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "btwn",
+                "v": "0",
+                "vt": "num",
+                "v2": "120",
+                "v2t": "num"
+            },
+            {
+                "t": "lt",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "120",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 4,
+        "x": 1150,
+        "y": 520,
+        "wires": [
+            [
+                "17faba750bc2f9a9"
+            ],
+            [
+                "b34ac5bb74047753",
+                "e51a446ebcd5c35a"
+            ],
+            [
+                "2d20c3571adb1c7c"
+            ],
+            [
+                "2d20c3571adb1c7c"
+            ]
+        ]
+    },
+    {
+        "id": "fe9b4a0717f42265",
+        "type": "switch",
+        "z": "80fed7c6aa4d30d0",
+        "name": "250-MFC Cond",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "btwn",
+                "v": "0",
+                "vt": "num",
+                "v2": "250",
+                "v2t": "num"
+            },
+            {
+                "t": "lt",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "250",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "200",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 1140,
+        "y": 600,
+        "wires": [
+            [
+                "17faba750bc2f9a9"
+            ],
+            [
+                "60e8ea34b49c0487"
+            ],
+            [
+                "2d20c3571adb1c7c"
+            ],
+            [
+                "2d20c3571adb1c7c"
+            ],
+            [
+                "f184e161d90af174"
+            ]
+        ]
+    },
+    {
+        "id": "daf8d16023f408e7",
+        "type": "switch",
+        "z": "80fed7c6aa4d30d0",
+        "name": "100-MFC Cond",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "btwn",
+                "v": "0",
+                "vt": "num",
+                "v2": "100",
+                "v2t": "num"
+            },
+            {
+                "t": "lt",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "100",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 4,
+        "x": 1140,
+        "y": 680,
+        "wires": [
+            [
+                "17faba750bc2f9a9"
+            ],
+            [
+                "01fa960d84babe33"
+            ],
+            [
+                "2d20c3571adb1c7c"
+            ],
+            [
+                "2d20c3571adb1c7c"
+            ]
+        ]
+    },
+    {
+        "id": "4cbaa46926c342e6",
+        "type": "debug",
+        "z": "80fed7c6aa4d30d0",
+        "name": "MQTT pub",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 2210,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "953bf0eb4fdcd854",
+        "type": "debug",
+        "z": "80fed7c6aa4d30d0",
+        "name": "split set",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 820,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "2d20c3571adb1c7c",
+        "type": "ui_toast",
+        "z": "80fed7c6aa4d30d0",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Again",
+        "cancel": "",
+        "raw": false,
+        "topic": "",
+        "name": "Wrong Set",
+        "x": 1610,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab68f506023dafb2",
+        "type": "ui_toast",
+        "z": "80fed7c6aa4d30d0",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "MQTT pub",
+        "name": "MQTT pub",
+        "x": 2450,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a51eef0ee722fa63",
+        "type": "change",
+        "z": "80fed7c6aa4d30d0",
+        "name": "Sending to RPi",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Sending to RPi",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2220,
+        "y": 340,
+        "wires": [
+            [
+                "ab68f506023dafb2"
+            ]
+        ]
+    },
+    {
+        "id": "213a7d9c9dc4a80c",
+        "type": "switch",
+        "z": "80fed7c6aa4d30d0",
+        "name": "Header_EVA cond",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "gte",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 1150,
+        "y": 320,
+        "wires": [
+            [
+                "5507a820fc5e882b"
+            ],
+            [
+                "44193cd74c3aed93"
+            ],
+            [
+                "2d20c3571adb1c7c"
+            ]
+        ]
+    },
+    {
+        "id": "1b059f26314128c8",
+        "type": "range",
+        "z": "80fed7c6aa4d30d0",
+        "minin": "0",
+        "maxin": "100",
+        "minout": "2047",
+        "maxout": "4095",
+        "action": "clamp",
+        "round": false,
+        "property": "payload",
+        "name": "0-100% to 0-10V (12bits)",
+        "x": 1650,
+        "y": 420,
+        "wires": [
+            [
+                "44193cd74c3aed93"
+            ]
+        ]
+    },
+    {
+        "id": "b34ac5bb74047753",
+        "type": "range",
+        "z": "80fed7c6aa4d30d0",
+        "d": true,
+        "minin": "0",
+        "maxin": "120",
+        "minout": "2047",
+        "maxout": "3071",
+        "action": "clamp",
+        "round": false,
+        "property": "payload",
+        "name": "0-120 to 0-5V (12bits)",
+        "x": 1640,
+        "y": 460,
+        "wires": [
+            [
+                "44193cd74c3aed93",
+                "85343ec0cdde3ab5"
+            ]
+        ]
+    },
+    {
+        "id": "60e8ea34b49c0487",
+        "type": "range",
+        "z": "80fed7c6aa4d30d0",
+        "minin": "0",
+        "maxin": "250",
+        "minout": "2047",
+        "maxout": "3071",
+        "action": "clamp",
+        "round": false,
+        "property": "payload",
+        "name": "0-250 to 0-5V (12bits)",
+        "x": 1640,
+        "y": 540,
+        "wires": [
+            [
+                "44193cd74c3aed93"
+            ]
+        ]
+    },
+    {
+        "id": "01fa960d84babe33",
+        "type": "range",
+        "z": "80fed7c6aa4d30d0",
+        "minin": "0",
+        "maxin": "100",
+        "minout": "2047",
+        "maxout": "3071",
+        "action": "clamp",
+        "round": false,
+        "property": "payload",
+        "name": "0-100 to 0-5V (12bits)",
+        "x": 1640,
+        "y": 580,
+        "wires": [
+            [
+                "44193cd74c3aed93"
+            ]
+        ]
+    },
+    {
+        "id": "85343ec0cdde3ab5",
+        "type": "debug",
+        "z": "80fed7c6aa4d30d0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 2030,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "5507a820fc5e882b",
+        "type": "change",
+        "z": "80fed7c6aa4d30d0",
+        "name": "Set null to 0",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 620,
+        "wires": [
+            [
+                "44193cd74c3aed93"
+            ]
+        ]
+    },
+    {
+        "id": "591d4e526bbce490",
+        "type": "change",
+        "z": "80fed7c6aa4d30d0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "NodeRed.Manual_Input",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e51a446ebcd5c35a",
+        "type": "function",
+        "z": "80fed7c6aa4d30d0",
+        "name": "",
+        "func": "msg.payload = (msg.payload - 1.04) / 14.3\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1600,
+        "y": 500,
+        "wires": [
+            [
+                "85343ec0cdde3ab5",
+                "d5c5404c3f893a22"
+            ]
+        ]
+    },
+    {
+        "id": "d5c5404c3f893a22",
+        "type": "range",
+        "z": "80fed7c6aa4d30d0",
+        "minin": "0",
+        "maxin": "5",
+        "minout": "2047",
+        "maxout": "3071",
+        "action": "clamp",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 1750,
+        "y": 500,
+        "wires": [
+            [
+                "44193cd74c3aed93"
+            ]
+        ]
+    },
+    {
+        "id": "f184e161d90af174",
+        "type": "ui_toast",
+        "z": "80fed7c6aa4d30d0",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Noticed",
+        "cancel": "",
+        "raw": false,
+        "topic": "",
+        "name": "BW reformer air 200LPM max",
+        "x": 1670,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e1fc816b016be8f",
+        "type": "function",
+        "z": "80fed7c6aa4d30d0",
+        "name": "",
+        "func": "var lst = [msg.Manual_Input, msg.Setup_port, msg.RS485_port, msg.Scale_port, msg.RS232_port, msg.GPIO_port]\nvar len = lst.length;\nmsg.lst = []\n\nfor (var i = 0; i < len; i++) {\n    for (var key in lst[i]) {\n        if (lst[i].hasOwnProperty(key)) {\n            msg.lst.push(lst[i][key])\n        }\n    }\n}\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 940,
+        "wires": [
+            [
+                "8e78edd3a81a1e9a"
+            ]
+        ]
+    },
+    {
+        "id": "8e78edd3a81a1e9a",
+        "type": "change",
+        "z": "80fed7c6aa4d30d0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "lst",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 940,
+        "wires": [
+            [
+                "fb073055686822b1"
+            ]
+        ]
+    },
+    {
+        "id": "fb073055686822b1",
+        "type": "GSheet",
+        "z": "80fed7c6aa4d30d0",
+        "d": true,
+        "creds": "700453c3.f1167c",
+        "method": "append",
+        "action": "",
+        "sheet": "1lOTmshcxpiFN5gS1Imb9cQJEx7GGZsbWBz4XVL5EG4w",
+        "cells": "Sheet1",
+        "flatten": false,
+        "name": "",
+        "x": 1040,
+        "y": 940,
+        "wires": [
+            [
+                "8d39a83e02550c31"
+            ]
+        ]
+    },
+    {
+        "id": "8d39a83e02550c31",
+        "type": "debug",
+        "z": "80fed7c6aa4d30d0",
+        "name": "gsheet",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 940,
         "wires": []
     }
 ]
