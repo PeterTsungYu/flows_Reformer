@@ -10933,12 +10933,12 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "/status_on ",
+                "v": "status_on",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "/status_off",
+                "v": "status_off",
                 "vt": "str"
             }
         ],
