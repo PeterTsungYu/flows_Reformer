@@ -1626,6 +1626,7 @@
         "id": "bebbe38f992f19d1",
         "type": "ui_chart",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "group": "8017259e78c711e5",
         "order": 7,
@@ -1659,6 +1660,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
+        "className": "",
         "x": 540,
         "y": 4260,
         "wires": [
@@ -4503,7 +4505,9 @@
             "9cc404dd4822185a",
             "ad8500bb10b62170",
             "6382945376a92b6d",
-            "1681bb0a0b2a89f8"
+            "1681bb0a0b2a89f8",
+            "4c36e2df6a0f0577",
+            "7ea0a2489208028a"
         ],
         "x": 2675,
         "y": 300,
@@ -5277,6 +5281,7 @@
         "id": "529b4b044354d7cc",
         "type": "ui_text_input",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "label": "H2_MFC (0-100LPM)",
         "tooltip": "0-100LPM",
@@ -5288,6 +5293,8 @@
         "mode": "number",
         "delay": "0",
         "topic": "",
+        "sendOnBlur": true,
+        "className": "",
         "topicType": "str",
         "x": 2800,
         "y": 1120,
@@ -5414,6 +5421,7 @@
         "id": "1e948d9e1ac229d8",
         "type": "ui_button",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "group": "8017259e78c711e5",
         "order": 3,
@@ -5424,6 +5432,7 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
+        "className": "",
         "icon": "",
         "payload": "5",
         "payloadType": "num",
@@ -5441,6 +5450,7 @@
         "id": "5a34664392c4a469",
         "type": "ui_button",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "group": "8017259e78c711e5",
         "order": 4,
@@ -5451,6 +5461,7 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
+        "className": "",
         "icon": "",
         "payload": "10",
         "payloadType": "num",
@@ -5468,6 +5479,7 @@
         "id": "06e4a966064fdc0c",
         "type": "ui_button",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "group": "8017259e78c711e5",
         "order": 5,
@@ -5478,6 +5490,7 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
+        "className": "",
         "icon": "",
         "payload": "20",
         "payloadType": "num",
@@ -5585,6 +5598,7 @@
         "id": "9cb6cbc13c163989",
         "type": "link in",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "init out",
         "links": [
             "c26a53e9bb47bf34"
@@ -5907,6 +5921,7 @@
         "id": "bd6726f8d9cba314",
         "type": "ui_text_input",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "label": "Header_BR_SV (>=0)",
         "tooltip": ">=0",
@@ -5918,6 +5933,8 @@
         "mode": "number",
         "delay": "0",
         "topic": "",
+        "sendOnBlur": true,
+        "className": "",
         "topicType": "str",
         "x": 3680,
         "y": 2220,
@@ -6166,6 +6183,7 @@
         "id": "8723b8763d06c93c",
         "type": "link in",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "init out",
         "links": [
             "c26a53e9bb47bf34"
@@ -8729,11 +8747,10 @@
         "id": "daf625565a5bfdd9",
         "type": "ui_switch",
         "z": "51d9a1627388b982",
-        "d": true,
         "name": "",
         "label": "Relay01",
         "tooltip": "",
-        "group": "887eab91629113f4",
+        "group": "9b31d2cdf27dce74",
         "order": 4,
         "width": 4,
         "height": 1,
@@ -8751,13 +8768,14 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
+        "className": "",
         "x": 2240,
         "y": 2560,
         "wires": [
             [
                 "b9bde8955441582e",
-                "77f9b296e37e5d89",
-                "d2a27cd8a7035c67"
+                "4e4f45ebef6e1682",
+                "9d9eb73a6173dc85"
             ]
         ]
     },
@@ -8844,7 +8862,8 @@
             "77f9b296e37e5d89",
             "d00fa001681215b0",
             "acfcee412e539645",
-            "57e79f02d3992c05"
+            "57e79f02d3992c05",
+            "d101680e2966c924"
         ],
         "x": 4175,
         "y": 900,
@@ -8897,43 +8916,6 @@
             [
                 "3762f75a0ed60a7c"
             ]
-        ]
-    },
-    {
-        "id": "77f9b296e37e5d89",
-        "type": "link out",
-        "z": "51d9a1627388b982",
-        "name": "Relay01_out",
-        "links": [
-            "d9ec3f63be7e2a33"
-        ],
-        "x": 2455,
-        "y": 2560,
-        "wires": []
-    },
-    {
-        "id": "d2a27cd8a7035c67",
-        "type": "change",
-        "z": "51d9a1627388b982",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "Relay.Relay01_Set",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2560,
-        "y": 2520,
-        "wires": [
-            []
         ]
     },
     {
@@ -9420,6 +9402,7 @@
         "id": "6beeda5c5213a8cb",
         "type": "ui_button",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "group": "8017259e78c711e5",
         "order": 2,
@@ -9430,6 +9413,7 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "",
+        "className": "",
         "icon": "",
         "payload": "0",
         "payloadType": "num",
@@ -10130,15 +10114,14 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
+        "className": "",
         "x": 2250,
         "y": 2780,
         "wires": [
             [
                 "801e91a95f36f824",
                 "2eebdb4246c33169",
-                "6ae8f1aea38675a0",
-                "726a198be466d933",
-                "109fc553d83f2102"
+                "6ae8f1aea38675a0"
             ]
         ]
     },
@@ -10744,70 +10727,6 @@
         "x": 4095,
         "y": 3020,
         "wires": []
-    },
-    {
-        "id": "726a198be466d933",
-        "type": "change",
-        "z": "51d9a1627388b982",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "NodeRed.Set.Relay01_Set",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2590,
-        "y": 2700,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d00fa001681215b0",
-        "type": "link out",
-        "z": "51d9a1627388b982",
-        "name": "Relay01_out",
-        "links": [
-            "d9ec3f63be7e2a33"
-        ],
-        "x": 2755,
-        "y": 2660,
-        "wires": []
-    },
-    {
-        "id": "109fc553d83f2102",
-        "type": "change",
-        "z": "51d9a1627388b982",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "Relay.Relay01_Set",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2560,
-        "y": 2660,
-        "wires": [
-            [
-                "d00fa001681215b0"
-            ]
-        ]
     },
     {
         "id": "198164cd48f17bbe",
@@ -11877,6 +11796,7 @@
         "id": "2d913fb012430558",
         "type": "ui_switch",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "label": "Blower",
         "tooltip": "",
@@ -11994,6 +11914,7 @@
         "id": "cd21e77bf9666939",
         "type": "ui_text_input",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "label": "PWM_02_freq (25kHz)",
         "tooltip": "(25kHz)",
@@ -12005,6 +11926,8 @@
         "mode": "number",
         "delay": "0",
         "topic": "",
+        "sendOnBlur": true,
+        "className": "",
         "topicType": "str",
         "x": 3180,
         "y": 3220,
@@ -12254,6 +12177,7 @@
         "id": "0de99bcb249e55bd",
         "type": "ui_text_input",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "label": "PWM_02_duty (0-100%)",
         "tooltip": "(0-100%)",
@@ -14167,6 +14091,7 @@
         "id": "ab2b7cab317a5293",
         "type": "ui_text_input",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "label": "KNF (0-.10 g/min )",
         "tooltip": "0-100%",
@@ -14246,6 +14171,7 @@
         "id": "4458a9adc5c04a43",
         "type": "ui_button",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "group": "959f5882ede84b36",
         "order": 3,
@@ -14274,6 +14200,7 @@
         "id": "08fe2f029d964559",
         "type": "ui_button",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "group": "959f5882ede84b36",
         "order": 4,
@@ -14525,6 +14452,7 @@
         "id": "ccbdbae3acb674ac",
         "type": "ui_button",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "group": "959f5882ede84b36",
         "order": 4,
@@ -14566,6 +14494,7 @@
         "id": "25aec434d8459d09",
         "type": "ui_switch",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "label": "Nozzle",
         "tooltip": "",
@@ -14683,6 +14612,7 @@
         "id": "560e7fa052f14fe0",
         "type": "ui_text_input",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "label": "PWM_03_duty (0-100%)",
         "tooltip": "(0-100%)",
@@ -14946,6 +14876,7 @@
         "id": "5f23e8dbed2e3b0b",
         "type": "ui_text_input",
         "z": "51d9a1627388b982",
+        "d": true,
         "name": "",
         "label": "PWM_03_freq (1-100Hz)",
         "tooltip": "(1-100Hz)",
@@ -17373,7 +17304,7 @@
         "id": "e523ec79c208525a",
         "type": "link in",
         "z": "51d9a1627388b982",
-        "name": "ig_Air_25",
+        "name": "Air_25",
         "links": [
             "34d5c80ad58e235a",
             "a0b9a9a973d57ec0"
@@ -17390,12 +17321,12 @@
         "id": "c4de31d3f741a768",
         "type": "link in",
         "z": "51d9a1627388b982",
-        "name": "ig_GP_on",
+        "name": "GP_on",
         "links": [
             "01c7e8c404e39cad",
             "34d5c80ad58e235a",
-            "a0b9a9a973d57ec0",
-            "a069045b0f7d453d"
+            "a069045b0f7d453d",
+            "a0b9a9a973d57ec0"
         ],
         "x": 2095,
         "y": 2780,
@@ -17446,7 +17377,7 @@
         "id": "216e557b0c070a38",
         "type": "link in",
         "z": "51d9a1627388b982",
-        "name": "ig_Fuel_4",
+        "name": "Fuel_4",
         "links": [
             "22c52f595bf55884",
             "a0b9a9a973d57ec0"
@@ -17574,7 +17505,8 @@
             "3575550fb93a18b6",
             "bb7aae53b6c5dc02",
             "53a53cff7e71a24d",
-            "fb770713464f1566"
+            "fb770713464f1566",
+            "f4e32fcbeeb19f52"
         ],
         "x": 2415,
         "y": 1260,
@@ -17615,16 +17547,13 @@
         "id": "7bdd5c6f0e5c51f9",
         "type": "link in",
         "z": "51d9a1627388b982",
-        "name": "ig_GP_off",
+        "name": "GP_off",
         "links": [
-            "883fc0bc634d9d34",
-            "15a6a5db77cca09c",
-            "ca25e263f2e5a4b9",
-            "93eba208d458b60e",
-            "3575550fb93a18b6",
-            "bb7aae53b6c5dc02",
-            "53a53cff7e71a24d",
-            "fb770713464f1566"
+            "f4e32fcbeeb19f52",
+            "fb770713464f1566",
+            "de6be637ea4cc615",
+            "56b48f623634283b",
+            "640ed0bf06058228"
         ],
         "x": 2095,
         "y": 2820,
@@ -17638,15 +17567,8 @@
         "id": "ce5f8ac53fec87fc",
         "type": "link in",
         "z": "51d9a1627388b982",
-        "name": "ig_Air_150",
+        "name": "Air_150",
         "links": [
-            "883fc0bc634d9d34",
-            "15a6a5db77cca09c",
-            "ca25e263f2e5a4b9",
-            "93eba208d458b60e",
-            "3575550fb93a18b6",
-            "bb7aae53b6c5dc02",
-            "53a53cff7e71a24d",
             "fb770713464f1566"
         ],
         "x": 2395,
@@ -17683,7 +17605,8 @@
         "y": 200,
         "wires": [
             [
-                "4281d378fb228b28"
+                "4281d378fb228b28",
+                "de6be637ea4cc615"
             ],
             [
                 "a6d6d848c67ad166"
@@ -17757,7 +17680,7 @@
         "id": "59536f8c9478083e",
         "type": "link in",
         "z": "51d9a1627388b982",
-        "name": "ig_Fuel_6",
+        "name": "Fuel_6",
         "links": [
             "01c7e8c404e39cad"
         ],
@@ -17773,7 +17696,7 @@
         "id": "67a0a2db8dd0a05e",
         "type": "link in",
         "z": "51d9a1627388b982",
-        "name": "ig_Air_32",
+        "name": "Air_32",
         "links": [
             "01c7e8c404e39cad"
         ],
@@ -18101,7 +18024,9 @@
         "z": "78167f7d57f71458",
         "name": "ig_Air_max",
         "links": [
-            "671e433278bde85c"
+            "3c41a464a74653d8",
+            "671e433278bde85c",
+            "7bdd5c6f0e5c51f9"
         ],
         "x": 2715,
         "y": 140,
@@ -18111,7 +18036,7 @@
         "id": "671e433278bde85c",
         "type": "link in",
         "z": "51d9a1627388b982",
-        "name": "ig_Air_200",
+        "name": "Air_200",
         "links": [
             "f4e32fcbeeb19f52"
         ],
@@ -18228,7 +18153,8 @@
             ],
             [
                 "c305f16aeb723046",
-                "e2db6a40e03dc70d"
+                "e2db6a40e03dc70d",
+                "4f572230fb0b0f07"
             ]
         ]
     },
@@ -18250,10 +18176,9 @@
         "repair": false,
         "outputs": 1,
         "x": 2570,
-        "y": 360,
+        "y": 440,
         "wires": [
             [
-                "4f572230fb0b0f07",
                 "a0b9a9a973d57ec0",
                 "f9eaa70e7f529628"
             ]
@@ -18278,8 +18203,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2780,
-        "y": 360,
+        "x": 2580,
+        "y": 400,
         "wires": [
             [
                 "a4c4ea1383b46cb7",
@@ -18300,7 +18225,7 @@
             "e523ec79c208525a"
         ],
         "x": 2715,
-        "y": 420,
+        "y": 500,
         "wires": []
     },
     {
@@ -18388,7 +18313,7 @@
         "id": "2210ebf5208c13cb",
         "type": "link in",
         "z": "51d9a1627388b982",
-        "name": "ig_Fuel_2",
+        "name": "Fuel_2",
         "links": [
             "a069045b0f7d453d"
         ],
@@ -18430,7 +18355,7 @@
         "id": "4642f317bf776827",
         "type": "link in",
         "z": "51d9a1627388b982",
-        "name": "ig_Air_20",
+        "name": "Air_20",
         "links": [
             "a069045b0f7d453d"
         ],
@@ -18542,7 +18467,8 @@
         "y": 120,
         "wires": [
             [
-                "a4c4ea1383b46cb7"
+                "a4c4ea1383b46cb7",
+                "56b48f623634283b"
             ],
             [
                 "a6d6d848c67ad166"
@@ -18598,7 +18524,9 @@
         "x": 3350,
         "y": 120,
         "wires": [
-            [],
+            [
+                "640ed0bf06058228"
+            ],
             [
                 "a6d6d848c67ad166"
             ]
@@ -18622,7 +18550,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 2570,
-        "y": 400,
+        "y": 480,
         "wires": [
             [
                 "f357cdcebf4088c0"
@@ -18638,7 +18566,7 @@
             "96976e325155a014"
         ],
         "x": 2715,
-        "y": 460,
+        "y": 540,
         "wires": []
     },
     {
@@ -18656,5 +18584,149 @@
                 "b4e4e01072040726"
             ]
         ]
+    },
+    {
+        "id": "9d9eb73a6173dc85",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "NodeRed.Set.Relay01_Set",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2590,
+        "y": 2560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d101680e2966c924",
+        "type": "link out",
+        "z": "51d9a1627388b982",
+        "name": "Relay01_out",
+        "links": [
+            "d9ec3f63be7e2a33"
+        ],
+        "x": 2755,
+        "y": 2520,
+        "wires": []
+    },
+    {
+        "id": "4e4f45ebef6e1682",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Relay.Relay01_Set",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2560,
+        "y": 2520,
+        "wires": [
+            [
+                "d101680e2966c924"
+            ]
+        ]
+    },
+    {
+        "id": "7ea0a2489208028a",
+        "type": "link in",
+        "z": "51d9a1627388b982",
+        "name": "init out",
+        "links": [
+            "c26a53e9bb47bf34"
+        ],
+        "x": 2035,
+        "y": 2480,
+        "wires": [
+            [
+                "7535c84352c2f3ea"
+            ]
+        ]
+    },
+    {
+        "id": "7535c84352c2f3ea",
+        "type": "change",
+        "z": "51d9a1627388b982",
+        "name": "Set as false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2170,
+        "y": 2480,
+        "wires": [
+            [
+                "daf625565a5bfdd9",
+                "c6f76660b5e1bf27"
+            ]
+        ]
+    },
+    {
+        "id": "de6be637ea4cc615",
+        "type": "link out",
+        "z": "78167f7d57f71458",
+        "name": "ig_GP_off",
+        "links": [
+            "7bdd5c6f0e5c51f9"
+        ],
+        "x": 1015,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "56b48f623634283b",
+        "type": "link out",
+        "z": "78167f7d57f71458",
+        "name": "ig_GP_off",
+        "links": [
+            "7bdd5c6f0e5c51f9"
+        ],
+        "x": 1815,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "640ed0bf06058228",
+        "type": "link out",
+        "z": "78167f7d57f71458",
+        "name": "ig_GP_off",
+        "links": [
+            "7bdd5c6f0e5c51f9"
+        ],
+        "x": 3495,
+        "y": 80,
+        "wires": []
     }
 ]
