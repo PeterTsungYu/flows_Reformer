@@ -24,4 +24,5 @@ Take a look at the [Pythonic IoT project](https://github.com/PeterTsungYu/dev_io
 | Pythonic IoT project  | [:link:][https://github.com/PeterTsungYu/dev_iot]    |
 | Visualization project | [:link:][https://github.com/PeterTsungYu/dev_eda]    |
 
-
+### Snaps
+![gif](https://i.imgur.com/UHQ0Eqj.gif)
