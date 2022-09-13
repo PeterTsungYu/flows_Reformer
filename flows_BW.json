@@ -145,9 +145,7 @@
             "5e3a563b578c59d3"
         ],
         "x": 74,
-        "y": 19,
-        "w": 1152,
-        "h": 1362
+        "y": 19
     },
     {
         "id": "8a28e92247530b3c",
@@ -268,9 +266,7 @@
             "4c48d65977bdf43b"
         ],
         "x": 3594,
-        "y": 379,
-        "w": 1392,
-        "h": 1502
+        "y": 379
     },
     {
         "id": "aac85df417bdc483",
@@ -384,9 +380,7 @@
             "2626467b31317e25"
         ],
         "x": 2254,
-        "y": 3119,
-        "w": 1162,
-        "h": 1402
+        "y": 3119
     },
     {
         "id": "49de837d7b6cc1fa",
@@ -505,9 +499,7 @@
             "136d253a0f6b8e32"
         ],
         "x": 2254,
-        "y": 1699,
-        "w": 1322,
-        "h": 1402
+        "y": 1699
     },
     {
         "id": "684fb990c19a5feb",
@@ -626,9 +618,7 @@
             "7649ab063c12574d"
         ],
         "x": 2474,
-        "y": 379,
-        "w": 1102,
-        "h": 1302
+        "y": 379
     },
     {
         "id": "facb78fe9b2d41d1",
@@ -739,9 +729,7 @@
             "0d3f933a3580adf7"
         ],
         "x": 74,
-        "y": 1399,
-        "w": 1082,
-        "h": 1422
+        "y": 1399
     },
     {
         "id": "567c6b052f44dfa0",
@@ -855,9 +843,7 @@
             "6d3231943b1e1430"
         ],
         "x": 74,
-        "y": 2839,
-        "w": 1082,
-        "h": 1622
+        "y": 2839
     },
     {
         "id": "c10a34573b7296b4",
@@ -1555,7 +1541,7 @@
         "type": "ui_group",
         "name": "EVA_PWM",
         "tab": "3951a8c0da358f70",
-        "order": 16,
+        "order": 17,
         "disp": true,
         "width": "4",
         "collapse": true
@@ -1790,7 +1776,7 @@
         "type": "ui_group",
         "name": "PID parameters",
         "tab": "3951a8c0da358f70",
-        "order": 17,
+        "order": 16,
         "disp": true,
         "width": "24",
         "collapse": true
@@ -10326,7 +10312,7 @@
         "type": "function",
         "z": "51d9a1627388b982",
         "name": "",
-        "func": "if (global.get('G_open')){\n    H2 = flow.get('NodeRed')['GA']['GA_H2']\n    CO2 = flow.get('NodeRed')['GA']['GA_CO2']\n    CO = flow.get('NodeRed')['GA']['GA_CO']\n    Scale = flow.get('NodeRed')['Scale']\n    DFM_RichGas = flow.get('NodeRed')['DFM']['60_DFM_RichGas']\n    DFM_AOG = flow.get('NodeRed')['DFM_AOG']['60_DFM_AOG']\n    DFM_total = DFM_RichGas + DFM_AOG\n    Convertion = flow.get('NodeRed')['Convertion'] / 100\n    P = flow.get('NodeRed')['ADAM_READ']['ADAM_P_Out'] / 1.01325 + 1\n    T = flow.get('NodeRed')['ADAM_TC']['RAD_Out'] + 273\n}else{\n    H2 = 0\n    CO2 = 0\n    CO = 0\n    Scale = 0\n    DFM_RichGas = 0\n    DFM_AOG = 0\n    DFM_total = DFM_RichGas + DFM_AOG\n    Convertion = 0\n    P = 0\n    T = 0\n}\nR = 0.082\nVolume = {}\nPercentage = {}\nif (Convertion > 1){\n    Convertion = 1\n}\n// Calculate MeOH & H2O mole\n\nVolume['MeOH'] = Scale * 0.543 / 32 * (1 - Convertion)\nVolume['H2O'] = Scale * (1 - 0.543) / 18 - Scale * 0.543 / 32 * Convertion\n\n// Calculate products mole\n\nVolume['H2'] = H2 * DFM_total * P / R / T\nVolume['CO2'] = CO2 * DFM_total * P / R / T\nVolume['CO'] = CO * DFM_total * P / R / T\n\nsum = Volume['MeOH'] + Volume['H2O'] + Volume['H2'] + Volume['CO2'] + Volume['CO']\n\n// Calculate percentage of all\nif (DFM_total != 0){\n    if (Volume['MeOH'] < 0){\n        Percentage['MeOH'] = 0\n    }else{\n        Percentage['MeOH'] = Volume['MeOH'] / sum * 100\n        Percentage['H2O'] = Volume['H2O'] / sum * 100\n        Percentage['H2'] = Volume['H2'] / sum * 100\n        Percentage['CO2'] = Volume['CO2'] / sum * 100\n        Percentage['CO'] = Volume['CO'] / sum * 100\n}\n}else{\n    Percentage['MeOH'] = 0\n    Percentage['H2O'] = 0\n    Percentage['H2'] = 0\n    Percentage['CO2'] = 0\n    Percentage['CO'] = 0\n}\nmsg.payload = Percentage\nmsg_lst = []\nfor (var key of Object.keys(msg.payload)) {\n    var temp = {}\n    temp.topic = key\n    temp.payload = msg.payload[key]\n    msg_lst.push(temp)\n}\n\nreturn msg_lst;",
+        "func": "if (global.get('G_open')){\n    var H2 = flow.get('NodeRed')['GA']['GA_H2']\n    var CO2 = flow.get('NodeRed')['GA']['GA_CO2']\n    var CO = flow.get('NodeRed')['GA']['GA_CO']\n    var Scale = flow.get('NodeRed')['Scale']\n    var DFM_RichGas = flow.get('NodeRed')['DFM']['60_DFM_RichGas']\n    var DFM_AOG = flow.get('NodeRed')['DFM_AOG']['60_DFM_AOG']\n    var DFM_total = DFM_RichGas + DFM_AOG\n    var Convertion = flow.get('NodeRed')['Convertion'] / 100\n    var P = flow.get('NodeRed')['ADAM_READ']['ADAM_P_Out'] / 1.01325 + 1\n    var T = flow.get('NodeRed')['ADAM_TC']['RAD_Out'] + 273\n}else{\n    H2 = 0\n    CO2 = 0\n    CO = 0\n    Scale = 0\n    DFM_RichGas = 0\n    DFM_AOG = 0\n    DFM_total = DFM_RichGas + DFM_AOG\n    Convertion = 0\n    P = 0\n    T = 0\n}\nvar R = 0.082\nvar Volume = {}\nvar Percentage = {}\nif (Convertion > 1){\n    Convertion = 1\n}\n// Calculate MeOH & H2O mole\n\nVolume['MeOH'] = Scale * 0.543 / 32 * (1 - Convertion)\nVolume['H2O'] = Scale * (1 - 0.543) / 18 - Scale * 0.543 / 32 * Convertion\n\n// Calculate products mole\n\nVolume['H2'] = H2 * DFM_total * P / R / T / 100\nVolume['CO2'] = CO2 * DFM_total * P / R / T / 100\nVolume['CO'] = CO * DFM_total * P / R / T / 100\n\nvar sum = Volume['MeOH'] + Volume['H2O'] + Volume['H2'] + Volume['CO2'] + Volume['CO']\n\n// Calculate percentage of all\nif (DFM_total != 0){\n    if (Volume['MeOH'] < 0){\n        Percentage['MeOH'] = 0\n    }else{\n        Percentage['MeOH'] = Volume['MeOH'] / sum * 100\n        Percentage['H2O'] = Volume['H2O'] / sum * 100\n        Percentage['H2'] = Volume['H2'] / sum * 100\n        Percentage['CO2'] = Volume['CO2'] / sum * 100\n        Percentage['CO'] = Volume['CO'] / sum * 100\n}\n}else{\n    Percentage['MeOH'] = 0\n    Percentage['H2O'] = 0\n    Percentage['H2'] = 0\n    Percentage['CO2'] = 0\n    Percentage['CO'] = 0\n}\nmsg.payload = Percentage\nvar msg_lst = []\nfor (var key of Object.keys(msg.payload)) {\n    var temp = {}\n    temp.topic = key\n    temp.payload = msg.payload[key]\n    msg_lst.push(temp)\n}\n\nreturn msg_lst;",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
@@ -10462,7 +10448,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "1",
+        "repeat": "3",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
@@ -10496,7 +10482,8 @@
         "y": 2980,
         "wires": [
             [
-                "a9a30c55d8cd7c94"
+                "a9a30c55d8cd7c94",
+                "b2b07a688c6b2d9f"
             ],
             [
                 "524edb318514637c"
@@ -12863,8 +12850,8 @@
         "links": [
             "22d28e88641c72d2"
         ],
-        "x": 4175,
-        "y": 420,
+        "x": 4185,
+        "y": 400,
         "wires": [
             [
                 "d3fbd3dbf1202f3b"
@@ -14193,7 +14180,9 @@
         "name": "1_out",
         "mode": "link",
         "links": [
-            "6891f2adec69dc3b"
+            "6891f2adec69dc3b",
+            "7dcee90b83cfe4ec",
+            "b172ad95c5a5e693"
         ],
         "x": 3605,
         "y": 3480,
@@ -19152,7 +19141,7 @@
         "z": "51d9a1627388b982",
         "g": "c10a34573b7296b4",
         "name": "PID開啟溫度",
-        "func": "var TC9 = flow.get('NodeRed')['ADAM_TC']['TC9']\nflow.set('temp_0', TC9)\nreturn msg;",
+        "func": "var TC9 = flow.get('NodeRed')['ADAM_TC']['TC9']\nflow.set('temp_0', TC9)\n// \nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -19876,7 +19865,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "80",
+                "to": "100",
                 "tot": "num"
             }
         ],
@@ -20131,6 +20120,56 @@
         "wires": [
             [
                 "f0ab173f29408ca5"
+            ]
+        ]
+    },
+    {
+        "id": "85d5b6d5873758c6",
+        "type": "inject",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "props": [
+            {
+                "p": "reset",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 70,
+        "y": 500,
+        "wires": [
+            [
+                "1917aafcfbcc9854"
+            ]
+        ]
+    },
+    {
+        "id": "cf4e4bd04d8b4f18",
+        "type": "inject",
+        "z": "51d9a1627388b982",
+        "name": "",
+        "props": [
+            {
+                "p": "reset",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 2030,
+        "y": 660,
+        "wires": [
+            [
+                "987d44f25280955b"
             ]
         ]
     },
@@ -21395,19 +21434,6 @@
                 "22d28e88641c72d2"
             ]
         ]
-    },
-    {
-        "id": "22d28e88641c72d2",
-        "type": "link out",
-        "z": "8937b4e3785f33cd",
-        "name": "controller out",
-        "mode": "link",
-        "links": [
-            "51c858cb246c1f81"
-        ],
-        "x": 4675,
-        "y": 240,
-        "wires": []
     },
     {
         "id": "9d6d684ba1206250",
@@ -23796,7 +23822,9 @@
         "type": "link in",
         "z": "8937b4e3785f33cd",
         "name": "RF_Pump_in",
-        "links": [],
+        "links": [
+            "9d1d85028dc02aa6"
+        ],
         "x": 3915,
         "y": 60,
         "wires": [
@@ -29111,7 +29139,9 @@
         "z": "8937b4e3785f33cd",
         "d": true,
         "name": "RF_Pump_in",
-        "links": [],
+        "links": [
+            "9d1d85028dc02aa6"
+        ],
         "x": 3915,
         "y": 260,
         "wires": [
@@ -33740,7 +33770,6 @@
         "id": "dcf66f4ba0337740",
         "type": "ui_chart",
         "z": "8937b4e3785f33cd",
-        "d": true,
         "g": "684fb990c19a5feb",
         "name": "",
         "group": "f1c6c39439b05d91",
@@ -33810,7 +33839,6 @@
         "y": 280,
         "wires": [
             [
-                "d2d852262fd85b50",
                 "efd6155a0e320c02"
             ]
         ]
@@ -33880,31 +33908,6 @@
             [
                 "30dc1fe2497f4cf3"
             ]
-        ]
-    },
-    {
-        "id": "d2d852262fd85b50",
-        "type": "change",
-        "z": "8937b4e3785f33cd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "G_CurrentPID_on_off",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 280,
-        "wires": [
-            []
         ]
     },
     {
@@ -33991,34 +33994,8 @@
         "wires": [
             [
                 "0f1a00f082dd73cf",
-                "2072925a8acd53c3",
                 "c7c76f96ebac234b"
             ]
-        ]
-    },
-    {
-        "id": "2072925a8acd53c3",
-        "type": "change",
-        "z": "8937b4e3785f33cd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "G_PCBPID_on_off",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2250,
-        "y": 480,
-        "wires": [
-            []
         ]
     },
     {
@@ -35740,7 +35717,6 @@
         "id": "c467742f1d30c2b5",
         "type": "ui_chart",
         "z": "8937b4e3785f33cd",
-        "d": true,
         "g": "aac85df417bdc483",
         "name": "",
         "group": "14866d49eeb7998e",
@@ -37477,34 +37453,8 @@
         "wires": [
             [
                 "1d97159c17bb5c25",
-                "a42901b3bccc9004",
                 "1578441194a6a545"
             ]
-        ]
-    },
-    {
-        "id": "a42901b3bccc9004",
-        "type": "change",
-        "z": "8937b4e3785f33cd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "G_LambdaPID_on_off",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2080,
-        "y": 1780,
-        "wires": [
-            []
         ]
     },
     {
@@ -38001,35 +37951,9 @@
         "y": 3220,
         "wires": [
             [
-                "d2da653a7980b93d",
                 "0732acd90ba32cab",
                 "bdf2a0e8dda81836"
             ]
-        ]
-    },
-    {
-        "id": "d2da653a7980b93d",
-        "type": "change",
-        "z": "8937b4e3785f33cd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "G_BurnerPID_on_off",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2180,
-        "y": 3260,
-        "wires": [
-            []
         ]
     },
     {
@@ -41069,13 +40993,13 @@
         "type": "change",
         "z": "8937b4e3785f33cd",
         "g": "567c6b052f44dfa0",
-        "name": "=0",
+        "name": "=60",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "0",
+                "to": "60",
                 "tot": "num"
             },
             {
@@ -42107,77 +42031,9 @@
         "y": 1480,
         "wires": [
             [
-                "f0317c5c1071d763",
                 "ea4e8acd73631fd3",
                 "4cfcc103b6efab01"
             ]
-        ]
-    },
-    {
-        "id": "f0317c5c1071d763",
-        "type": "change",
-        "z": "8937b4e3785f33cd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "G_CatbedPID_on_off",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "PID_Set.CatBedPID_Kp",
-                "pt": "flow",
-                "to": "1",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "PID_Set.CatBedPID_Ki",
-                "pt": "flow",
-                "to": "0.003",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "PID_Set.CatBedPID_Kd",
-                "pt": "flow",
-                "to": "8",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "PID_Set.CatBedPID_beta",
-                "pt": "flow",
-                "to": "0",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "PID_Set.CatBedPID_kick",
-                "pt": "flow",
-                "to": "1",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "PID_Set.CatBedPID_tstep",
-                "pt": "flow",
-                "to": "15",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1560,
-        "y": 1480,
-        "wires": [
-            []
         ]
     },
     {
@@ -42803,34 +42659,8 @@
         "y": 2800,
         "wires": [
             [
-                "c93c7ea976e8d8f9",
                 "102563ab6a62fb0e"
             ]
-        ]
-    },
-    {
-        "id": "c93c7ea976e8d8f9",
-        "type": "change",
-        "z": "8937b4e3785f33cd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "G_EVAPID_on_off",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1630,
-        "y": 2760,
-        "wires": [
-            []
         ]
     },
     {
@@ -43665,7 +43495,8 @@
         "wires": [
             [
                 "df70d104ec11048a",
-                "5cc4acbfdd2c6fd8"
+                "5cc4acbfdd2c6fd8",
+                "570e8bc26aad4d81"
             ]
         ]
     },
@@ -44821,6 +44652,19 @@
                 "c8671630b4f0ee02"
             ]
         ]
+    },
+    {
+        "id": "22d28e88641c72d2",
+        "type": "link out",
+        "z": "8937b4e3785f33cd",
+        "name": "controller out",
+        "mode": "link",
+        "links": [
+            "51c858cb246c1f81"
+        ],
+        "x": 4425,
+        "y": 280,
+        "wires": []
     },
     {
         "id": "198164cd48f17bbe",
