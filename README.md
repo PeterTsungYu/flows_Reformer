@@ -89,8 +89,38 @@ The browser should be the one running on your machine (like RPi) or the one on y
 2. There are some [add-on dependencies](https://github.com/PeterTsungYu/flows_Reformer/blob/f58e6b7e5ea29fcb2f91cfca4b48b40701c1f44f/package.json#L5) needed to be downloaded via the NodeRed pallete.
 > To find where to manage palette, right click the upper right icon with three lines. From the drop-down, you may find it.
 
+### Edit nodes
+There are plenty of nodes inside the flows you just imported.
+Some of them could be easily customized to meet your personal application interest.
+The below instructions are starting points for your own project.
 
+#### MQTT nodes
+##### Subscription nodes, also known as mqtt_in nodes
+Observed from the below image, this project uses the mqtt server and nodered serve both in a local host. (A RPi 3B+ hosts in this project.) 
+The default port for the mqtt server is at 1883.
+- Actions: Subscribe to a single topic, which is the "ADAM_*" down below.
+> The subscription topic here should be a published variable, which is the opposite role in the MQTT protocol, in the other platform. 
+[Pythonic IoT project](https://github.com/PeterTsungYu/dev_iot) is an example. Check the [rehttps://github.com/PeterTsungYu/dev_iot#define-your-topics-to-be-published--subscribedadme](https://github.com/PeterTsungYu/dev_iot#define-your-topics-to-be-published--subscribed) for more information on how to define subscription and publication topics inside a config.py file.
+Carefully define on both sides; otherwise, the MQTT will not work as you would expect. 
+<img src="https://i.imgur.com/ahZN0i4.png" width="250" height="300">
 
+##### A subscription node in one of the flows
+The below image is an example of showing how to read data from another platform via the MQTT protocol.
+1. The flow stats from using a MQTT_in node to subscribe the topic called "ADAM_*".
+2. It then communicates data, which have been processed by another program, from an 8-channel data collecter to here.  
+3. The 8-channel data will be displayed in some charts on the dashboard.
+4. Data are packed in a variable called "NodeRed.*" with a prefix called flow. The prefix allow you to access this flow_variable in some other flow wihin this project. See [more introduction](https://nodered.org/docs/user-guide/context#:~:text=in%20your%20browser.-,What%20is%20context%3F,This%20is%20called%20%27context%27.) on managing with different contexts in the official document.
+5. The flow_variable is further connected to a mqtt_out node to be piped to a database.
+<img src="https://i.imgur.com/RAtgTHf.png" width="750" height="200">
 
-### Import flows
+##### Publication nodes, also known as mqtt_out nodes
+- Actions: Publish a single topic, which is the "NodeRed" down below, to the MQTT server
+> The publication topic here should be a subscribed variable, which is the opposite role in the MQTT protocol, in the other platform. 
+<img src="https://i.imgur.com/lXpLejH.png" width="250" height="300">
 
+##### A publication node in one of the flows
+The below image is an example of showing how to transfer data to another platform/program via the MQTT protocol.
+1. The injection node continuously inserts a flow_variable (a variable accessed from another flow.) every 1 sec.
+2. The end of this flow is the mqtt_out node, which is publishing a topic to the MQTT server.
+3. In this project, it is the NodeRed topic carrying all the data processed by the flows that will be further piped to a remote database.   
+<img src="https://i.imgur.com/HYQ0SP4.png" width="550" height="300">
